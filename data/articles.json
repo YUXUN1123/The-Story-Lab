@@ -1,5 +1,28 @@
 [
   {
+    "id": "why-glassware-has-different-shapes",
+    "slug": "why-glassware-has-different-shapes",
+    "title": "為什麼玻璃杯有不同的形狀？",
+    "subtitle": "流體力學與香氣氣室：解構杯體弧度、仰角落點與味蕾感官的造物哲學",
+    "category": "design-creation",
+    "category_name": "Design & Creation",
+    "publish_date": "2026-11-16",
+    "read_time": "7 MIN READ",
+    "target_subject": "玻璃杯幾何與感官機能",
+    "summary": "為什麼香檳使用修長的笛型杯、威士忌使用厚實的平底岩石杯、而葡萄酒需要巨大的圓弧杯肚？本文從流體力學、香氣氣室（Headspace）與飲用仰角，解構玻璃器具「形隨機能」的造物哲學。",
+    "url": "articles/why-glassware-has-different-shapes.html",
+    "cover_image": "assets/images/articles/why-glassware-has-different-shapes/cover.svg",
+    "cover_caption": "形式的流動：玻璃杯絕非單純裝載液體的靜態容器，每一處曲率、縮口與杯壁厚度，都是精密引導感官體驗的物理儀器。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["設計與造物", "器物美學", "流體力學", "感官科學", "形隨機能"],
+    "featured": true,
+    "visual_theme": "refined",
+    "related_articles": [
+      "how-denim-became-timeless",
+      "why-perfume-has-top-middle-base-notes"
+    ]
+  },
+  {
     "id": "why-perfume-has-top-middle-base-notes",
     "slug": "why-perfume-has-top-middle-base-notes",
     "title": "香水為什麼有前調、中調、後調？",

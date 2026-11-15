@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F6F0"/>
+      <stop offset="50%" stop-color="#F2EDE4"/>
+      <stop offset="100%" stop-color="#E8E1D5"/>
+    </linearGradient>
+    <linearGradient id="glassStemGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#292927" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#655348" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 背景紙質底色 -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- 復古網格與參考線 -->
+  <g opacity="0.18" stroke="#655348" stroke-width="0.75" stroke-dasharray="3,3">
+    <line x1="80" y1="80" x2="1120" y2="80"/>
+    <line x1="80" y1="595" x2="1120" y2="595"/>
+    <line x1="80" y1="80" x2="80" y2="595"/>
+    <line x1="1120" y1="80" x2="1120" y2="595"/>
+    <line x1="600" y1="60" x2="600" y2="615"/>
+    <line x1="60" y1="337.5" x2="1140" y2="337.5"/>
+  </g>
+
+  <!-- 典雅雙細線外框 -->
+  <rect x="70" y="70" width="1060" height="535" fill="none" stroke="#655348" stroke-width="1.2" opacity="0.4"/>
+  <rect x="78" y="78" width="1044" height="519" fill="none" stroke="#69745C" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- 刊頭裝飾標記 -->
+  <text x="100" y="115" font-family="'Cormorant Garamond', serif" font-size="14" letter-spacing="4" fill="#655348" opacity="0.8">THE STORY LAB · ARCHITECTURE DE VERRE</text>
+  <text x="1100" y="115" text-anchor="end" font-family="'Courier New', monospace" font-size="12" letter-spacing="2" fill="#69745C" opacity="0.7">REF: DES-02 // 2026</text>
+
+  <!-- 中央主視覺：三大典型幾何玻璃杯輪廓疊加 -->
+  <g transform="translate(600, 340)">
+    
+    <!-- 1. 笛型香檳杯 (Flute) - 細長垂直構圖 -->
+    <g transform="translate(-280, -20)">
+      <!-- 杯身 -->
+      <path d="M-22,-140 C-20,-80 -18,20 0,60 C18,20 20,-80 22,-140 Z" fill="#FFFFFF" fill-opacity="0.45" stroke="#292927" stroke-width="1.4"/>
+      <!-- 液面弧線 -->
+      <path d="M-20,-70 Q0,-65 20,-70" fill="none" stroke="#C2A26F" stroke-width="1" stroke-dasharray="2,2"/>
+      <!-- 細長杯梗與底座 -->
+      <line x1="0" y1="60" x2="0" y2="180" stroke="url(#glassStemGrad)" stroke-width="2"/>
+      <ellipse cx="0" cy="180" rx="36" ry="6" fill="#FFFFFF" fill-opacity="0.5" stroke="#292927" stroke-width="1.2"/>
+      <!-- 標註文字 -->
+      <text x="0" y="215" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="13" font-style="italic" fill="#574448">Champagne Flute</text>
+      <text x="0" y="232" text-anchor="middle" font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#7E6B6E">長柱保泡 · 垂直升騰</text>
+    </g>
+
+    <!-- 2. 勃艮第大肚杯 (Burgundy Balloon) - 寬圓主體，位於中心稍微偏右後方 -->
+    <g transform="translate(0, -35)">
+      <!-- 寬大圓弧杯肚 -->
+      <path d="M-60,-125 C-120,-30 -110,60 0,95 C110,60 120,-30 60,-125 C45,-125 -45,-125 -60,-125 Z" fill="#FFFFFF" fill-opacity="0.6" stroke="#292927" stroke-width="1.8"/>
+      <!-- 頂部縮口引導線 -->
+      <ellipse cx="0" cy="-125" rx="60" ry="10" fill="none" stroke="#69745C" stroke-width="1" opacity="0.5"/>
+      <!-- 液面波紋 -->
+      <path d="M-92,20 Q0,35 92,20" fill="none" stroke="#8E2927" stroke-width="1.2" stroke-opacity="0.5"/>
+      <!-- 杯梗與底座 -->
+      <line x1="0" y1="95" x2="0" y2="195" stroke="url(#glassStemGrad)" stroke-width="2.5"/>
+      <ellipse cx="0" cy="195" rx="55" ry="8" fill="#FFFFFF" fill-opacity="0.7" stroke="#292927" stroke-width="1.4"/>
+      <!-- 光影高光線條 -->
+      <path d="M-85,-20 C-95,20 -70,60 -20,85" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.8"/>
+      <!-- 標註文字 -->
+      <text x="0" y="230" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="15" font-weight="600" fill="#292927">Burgundy Grand Cru</text>
+      <text x="0" y="248" text-anchor="middle" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#655348">大揮發面 · 聚攏花果香</text>
+    </g>
+
+    <!-- 3. 波爾多高鬱金香杯 (Bordeaux Tulip) - 右側優雅收腰 -->
+    <g transform="translate(280, -25)">
+      <!-- 鬱金香型修長杯身 -->
+      <path d="M-42,-135 C-70,-60 -65,30 0,80 C65,30 70,-60 42,-135 Z" fill="#FFFFFF" fill-opacity="0.5" stroke="#292927" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-135" rx="42" ry="7" fill="none" stroke="#69745C" stroke-width="0.8" opacity="0.4"/>
+      <!-- 液面 -->
+      <path d="M-55,-10 Q0,5 55,-10" fill="none" stroke="#8E2927" stroke-width="1" stroke-opacity="0.4"/>
+      <!-- 杯梗與底座 -->
+      <line x1="0" y1="80" x2="0" y2="185" stroke="url(#glassStemGrad)" stroke-width="2.2"/>
+      <ellipse cx="0" cy="185" rx="45" ry="7" fill="#FFFFFF" fill-opacity="0.6" stroke="#292927" stroke-width="1.2"/>
+      <!-- 標註文字 -->
+      <text x="0" y="220" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="13" font-style="italic" fill="#574448">Bordeaux Tulip</text>
+      <text x="0" y="237" text-anchor="middle" font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#7E6B6E">長收束口 · 柔化單寧</text>
+    </g>
+  </g>
+
+  <!-- 幾何尺寸標註線與裝飾箭頭 (Aesthetic Measurement Callouts) -->
+  <g stroke="#C2A26F" stroke-width="0.8" opacity="0.65">
+    <!-- 揮發艙高標線 -->
+    <line x1="480" y1="215" x2="440" y2="215"/>
+    <line x1="480" y1="375" x2="440" y2="375"/>
+    <line x1="450" y1="215" x2="450" y2="375"/>
+    <!-- 角度指引線 -->
+    <path d="M685,320 L730,300 L760,300" fill="none"/>
+  </g>
+  <text x="435" y="295" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#655348" opacity="0.85">HEADSPACE AROMA</text>
+  <text x="765" y="296" font-family="'Courier New', monospace" font-size="10" fill="#655348" opacity="0.85">TILT ANGLE 32°</text>
+
+  <!-- 底部典雅手寫體與核心金句 -->
+  <text x="600" y="555" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="28" fill="#8E2927" opacity="0.85">Form Follows Aroma</text>
+  <text x="600" y="578" text-anchor="middle" font-family="'Noto Serif TC', serif" font-size="12" letter-spacing="3" fill="#574448" opacity="0.9">幾何並非裝飾，形狀即是香氣與味蕾的導流儀器</text>
+</svg>
