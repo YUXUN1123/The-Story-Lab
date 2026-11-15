@@ -78,10 +78,10 @@
     <rect x="-65" y="0" width="130" height="90" fill="#FFF9F5" stroke="#493A34" stroke-width="1" rx="2" />
     <rect x="-60" y="5" width="120" height="80" fill="none" stroke="#D8CEBC" stroke-width="0.8" stroke-dasharray="2,2" />
     
-    <text x="0" y="28" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#8E2927" text-anchor="middle" letter-spacing="3">THE STORY LAB</text>
+    <text x="0" y="24" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#8E2927" text-anchor="middle" letter-spacing="3">THE STORY LAB</text>
     <text x="0" y="44" font-family="'Courier New', monospace" font-size="7.5" fill="#587D91" text-anchor="middle" letter-spacing="2">N° 01 · VOLATILITÉ</text>
     <line x1="-30" y1="52" x2="30" y2="52" stroke="#B9878C" stroke-width="0.8" />
-    <text x="0" y="68" font-family="Georgia, serif" font-style="italic" font-size="8.5" fill="#493A34" text-anchor="middle">Pyramide Olfactive</text>
+    <text x="0" y="70" font-family="Georgia, serif" font-style="italic" font-size="8.5" fill="#493A34" text-anchor="middle">Pyramide Olfactive</text>
   </g>
 
   <!-- Editorial Masthead Badges & Typography -->
