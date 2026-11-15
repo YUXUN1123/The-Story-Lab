@@ -1,6 +1,16 @@
 ﻿param(
-    [string]$TargetDir = "C:\Users\yuxun\.gemini\antigravity\scratch\the-story-lab\assets\images\articles"
+    [string]$TargetDir = ""
 )
+
+if (-not $TargetDir) {
+    $scriptBase = Split-Path -Parent $PSScriptRoot
+    $candidate = Join-Path $PSScriptRoot "..\assets\images\articles"
+    if (Test-Path $candidate) {
+        $TargetDir = (Resolve-Path $candidate).Path
+    } else {
+        $TargetDir = "C:\Users\yuxun\.gemini\antigravity\scratch\the-story-lab\assets\images\articles"
+    }
+}
 
 $svgFiles = Get-ChildItem -Path $TargetDir -Filter "*.svg" -Recurse
 
