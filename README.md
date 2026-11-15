@@ -198,7 +198,7 @@ npx http-server -p 8000
    git add .
    git commit -m "feat: initial commit with complete editorial architecture and 5 articles"
    git branch -M main
-   git remote add origin https://github.com/<YOUR-USERNAME>/the-story-lab.git
+   git remote add origin https://github.com/YUXUN1123/The-Story-Lab.git
    git push -u origin main
    ```
 3. **啟用 GitHub Pages**
@@ -206,9 +206,9 @@ npx http-server -p 8000
    - 在 **Build and deployment** > **Source** 選擇 **Deploy from a branch**。
    - **Branch** 選擇 `main` 分支，資料夾選擇 `/ (root)`。
    - 點擊 **Save**。
-4. **上線瀏覽**
-   - 靜態網站將在 1-2 分鐘內自動完成部署，線上正式網址為：
-     `https://<YOUR-USERNAME>.github.io/the-story-lab/`
+4. **線上正式網址**
+   - 線上正式預覽與閱讀網址為：
+     👉 **[https://yuxun1123.github.io/The-Story-Lab/](https://yuxun1123.github.io/The-Story-Lab/)**
 
 ---
 
