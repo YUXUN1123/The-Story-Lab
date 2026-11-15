@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>視覺系統風格預覽 — THE STORY LAB 事物探索研究所</title>
+  <meta name="description" content="THE STORY LAB 四套固定視覺模板互動預覽：Artistic Scrapbook、Refined、Romantic、Experimental。">
+
+  <!-- 字型引入 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- 樣式引用 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/article.css">
+
+  <style>
+    /* 預覽頁專屬控制浮動條 */
+    .preview-control-panel {
+      position: sticky;
+      top: var(--header-height);
+      z-index: 90;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--theme-border, #E8D0D0);
+      padding: 1rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+    }
+
+    .palette-swatches {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      font-family: var(--theme-font-mono, monospace);
+    }
+
+    .swatch-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--theme-text-muted);
+    }
+
+    .swatch-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.15);
+      display: inline-block;
+    }
+
+    .preview-banner {
+      text-align: center;
+      padding: 2rem 1.5rem 1rem;
+      background: linear-gradient(180deg, var(--theme-highlight, #FAF5EC) 0%, transparent 100%);
+      border-bottom: 1px dashed var(--theme-border);
+    }
+  </style>
+</head>
+<body class="article-page" data-theme="scrapbook">
+
+  <!-- 1. 全域頁首導覽（統一品牌骨架） -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="THE STORY LAB 首頁">
+        <span class="brand-en">THE STORY LAB</span>
+        <span class="brand-zh">事物探索研究所</span>
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="切換選單" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="全站導覽">
+        <a href="index.html">Home</a>
+        <a href="categories/everyday-mysteries.html">Everyday Mysteries</a>
+        <a href="categories/design-creation.html">Design & Creation</a>
+        <a href="categories/origins-stories.html">Origins & Stories</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 閱讀進度條 -->
+  <div id="read-progress" class="read-progress-bar"></div>
+
+  <!-- 2. 獨立預覽控制列（切換四套固定視覺模板） -->
+  <section class="preview-control-panel">
+    <div class="container" style="text-align: center;">
+      <div style="font-size: 0.8rem; font-family: var(--theme-font-mono, monospace); color: var(--theme-text-muted); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+        ONE BRAND, FOUR VISUAL IDENTITIES · 互動切換風格模板
+      </div>
+
+      <div class="theme-selector-bar">
+        <button class="theme-pill-btn active" data-target-theme="scrapbook">
+          <span class="color-dot"></span>
+          <span>01. Artistic Scrapbook</span>
+        </button>
+        <button class="theme-pill-btn" data-target-theme="refined">
+          <span class="color-dot"></span>
+          <span>02. Refined</span>
+        </button>
+        <button class="theme-pill-btn" data-target-theme="romantic">
+          <span class="color-dot"></span>
+          <span>03. Romantic</span>
+        </button>
+        <button class="theme-pill-btn" data-target-theme="experimental">
+          <span class="color-dot"></span>
+          <span>04. Experimental</span>
+        </button>
+      </div>
+
+      <!-- 當前色票展示 -->
+      <div id="active-palette-display" class="palette-swatches">
+        <!-- JS 動態填入目前色票 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 風格說明橫幅 -->
+  <div class="preview-banner">
+    <div class="container">
+      <span id="theme-tagline" class="stamp-badge">ARTISTIC SCRAPBOOK ｜ 藝術拼貼風格</span>
+      <p id="theme-description" style="max-width: 680px; margin: 0.75rem auto 0; font-size: 0.95rem; color: var(--theme-text-muted);">
+        歐陽娜娜藝術展覽、獨立 Zine 手作紙本感。結合紙膠帶、撕紙與復古剪報排版，保留舒適留白與文字節奏。
+      </p>
+    </div>
+  </div>
+
+  <!-- 3. 文章內頁展示（完整包含 6 大固定骨架 + 特殊模組） -->
+  <main class="article-container">
+    <article class="article-content">
+
+      <!-- 骨架 1：刊頭區 -->
+      <header class="article-header">
+        <div class="meta-tag-group">
+          <span class="category-badge">DESIGN & CREATION</span>
+          <span class="publish-date">2026-11-15</span>
+          <span class="read-time">6 MIN READ</span>
+          <span id="theme-indicator" class="theme-tape">THEME: SCRAPBOOK</span>
+        </div>
+        
+        <h1 class="article-title">一公釐裡的微型奇蹟：原子筆滾珠的旋轉秘密</h1>
+        <p class="article-subtitle">為什麼這顆看似平凡的碳化鎢微鋼珠，曾是二戰後最難製造的日常工藝極限？</p>
+        
+        <figure class="featured-figure">
+          <!-- 模擬插圖展示相框質感 -->
+          <div style="width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--theme-border) 0%, var(--theme-highlight) 100%); display: flex; align-items: center; justify-content: center; color: var(--theme-text-muted); font-family: var(--theme-font-mono, monospace); font-size: 0.9rem;">
+            [ FIGURE 01 · 顯微鏡下的微米滾珠出墨結構 ]
+          </div>
+          <figcaption>
+            <span class="caption">高倍率電子顯微鏡下的原子筆筆尖鋼珠與出墨導溝（工藝公差奈米級剖面）。</span>
+            <span class="credit">圖／Science Museum Archive (Public Domain)</span>
+          </figcaption>
+        </figure>
+      </header>
+
+      <!-- 骨架 2：引言區（含首字下沉） -->
+      <section class="article-hook">
+        <p>當你握起手邊最普通的一支原子筆在紙上劃下字跡時，你其實正在操控一具每秒能高速旋轉數千圈的微型滾珠軸承。在不到一公釐的狹窄球腔裡，金屬球體必須在承受下壓力時順暢旋轉，同時以精確的微米間隙將高黏度油墨鋪展在纖維紙面。</p>
+      </section>
+
+      <!-- 骨架 3：核心速覽卡（Key Facts Box） -->
+      <aside class="key-facts-box">
+        <h3 class="box-title">Key Facts 速覽指標</h3>
+        <ul class="facts-list">
+          <li><strong>研究客體：</strong>原子筆筆尖微型滾珠（Ballpoint Tip Assembly）</li>
+          <li><strong>成型年代：</strong>1938 年由 László Bíró 取得專利，1950 年代完善精密微珠</li>
+          <li><strong>關鍵材質：</strong>碳化鎢（Tungsten Carbide），莫氏硬度高達 9</li>
+          <li><strong>製造公差：</strong>圓度公差小於 0.1 微米（相當於頭髮直徑的八百分之一）</li>
+        </ul>
+      </aside>
+
+      <!-- 骨架 4：主體深度故事 -->
+      <div class="article-body">
+        <section>
+          <h2>世紀書寫難題：鋼筆為什麼無法隨心所欲？</h2>
+          <p>
+            在原子筆問世之前，人類依賴蘸水筆或吸墨式鋼筆。鋼筆雖然流暢，但墨水黏度極低、乾燥緩慢，飛行員在氣壓劇變的座艙中甚至會面臨墨囊膨脹噴濺的災難。解決這場書寫危機的核心，不是發明更好的墨水，而是找到一種能「一邊封閉墨槽、一邊受壓滾動出墨」的機構。
+          </p>
+        </section>
+
+        <!-- 選用特殊模組：原理拆解（How It Works） -->
+        <div class="module-how-it-works">
+          <h4>【原理拆解】五個微米爪如何阻擋墨水崩漏？</h4>
+          <p>
+            微型滾珠並非單純塞進金屬管中，而是被五隻超精密車削的微米包覆爪（Retaining Lip）精準扣留。當筆尖接觸紙張受力時，滾珠向內輕微位移打開通道，油墨隨表面張力均勻附著並帶出；一旦筆尖抬起，彈性壓力立即重新封合，滴墨不漏。
+          </p>
+        </div>
+
+        <section>
+          <h2>一公釐的世界：奈米級公差的工藝極限</h2>
+          <p>
+            製造一顆滾珠軸承不難，但以幾角錢台幣的極致成本，每日穩定生產數千萬顆直徑完全均勻、表面粗糙度接近鏡面的鋼珠，考驗著一個國家的冶金與超精密加工底蘊。這正是日常生活裡最深沉的科技奇蹟。
+          </p>
+        </section>
+      </div>
+
+      <!-- 骨架 5：探索者手札（Curator's Note） -->
+      <section class="curator-note">
+        <p>
+          我們常常讚嘆摩天大樓或太空梭的宏偉，卻容易忽略那些被壓進幾角錢台幣裡的極致工藝。原子筆告訴我們：最偉大的設計，往往是那些讓你感受不到它存在、卻默默承載世界日常運轉的生活細節。
+        </p>
+      </section>
+
+      <!-- 骨架 6：參考資料與文獻（References） -->
+      <footer class="article-references">
+        <h3>參考資料與文獻庫</h3>
+        <ol class="references-list">
+          <li>
+            <a href="https://patents.google.com" target="_blank" rel="noopener noreferrer">Bíró, László. "Writing Instrument Patent Record (US Patent 2,390,636)". United States Patent Office, 1945.</a>
+          </li>
+          <li>
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer">Petroski, Henry. "The Evolution of Useful Things: How Everyday Artifacts Came to Be". Vintage Books, 1994.</a>
+          </li>
+        </ol>
+      </footer>
+    </article>
+
+    <!-- 相關文章推薦區 -->
+    <aside class="related-articles-section">
+      <h3>探索更多背後故事</h3>
+      <div class="related-grid">
+        <article class="article-card" data-theme="scrapbook">
+          <div class="article-card-thumb" style="background: var(--theme-highlight); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--theme-text-muted);">
+            [ RELATED STORY A ]
+          </div>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span class="article-card-category">EVERYDAY MYSTERIES</span>
+              <span class="meta-dot">·</span>
+              <span>4 MIN READ</span>
+            </div>
+            <h4 class="article-card-title">易開罐拉環的槓桿史</h4>
+            <p class="article-card-summary">小小的鋁片拉環，如何歷經二十年演化，從傷人利刃蛻變為零廢棄的經典力學。</p>
+          </div>
+        </article>
+
+        <article class="article-card" data-theme="scrapbook">
+          <div class="article-card-thumb" style="background: var(--theme-highlight); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--theme-text-muted);">
+            [ RELATED STORY B ]
+          </div>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span class="article-card-category">ORIGINS & STORIES</span>
+              <span class="meta-dot">·</span>
+              <span>7 MIN READ</span>
+            </div>
+            <h4 class="article-card-title">長尾夾的百年抗拉力學</h4>
+            <p class="article-card-summary">1910 年的專利彈簧鋼片，如何以一己之力顛覆傳統裝訂，成為辦公室桌上的常青樹。</p>
+          </div>
+        </article>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 4. 全域頁尾（統一品牌骨架） -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-en">THE STORY LAB</div>
+          <div style="font-family: var(--font-serif-zh); font-size: 0.85rem; letter-spacing: 0.15em; color: var(--theme-primary); margin-bottom: 0.85rem;">事物探索研究所</div>
+          <p class="brand-desc">
+            專注於挖掘日常事物、設計哲學與歷史起源背後的故事。ONE BRAND, FOUR VISUAL IDENTITIES.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Les Cahiers</h3>
+          <ul class="footer-links">
+            <li><a href="categories/everyday-mysteries.html">Everyday Mysteries</a></li>
+            <li><a href="categories/design-creation.html">Design & Creation</a></li>
+            <li><a href="categories/origins-stories.html">Origins & Stories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Design System</h3>
+          <ul class="footer-links">
+            <li><a href="theme-preview.html">風格系統預覽</a></li>
+            <li><a href="about.html">關於本所宗旨</a></li>
+            <li><a href="about.html#ethics">編輯與查證規範</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 THE STORY LAB（事物探索研究所）. All rights reserved.</p>
+        <p>ONE BRAND, FOUR VISUAL IDENTITIES · Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 預覽切換腳本 -->
+  <script>
+    const themeData = {
+      scrapbook: {
+        name: "Artistic Scrapbook ｜ 藝術拼貼",
+        desc: "歐陽娜娜藝術展覽、獨立 Zine 手作紙本感。結合紙膠帶、撕紙與復古剪報排版，保留舒適留白與文字節奏。",
+        badge: "ARTISTIC SCRAPBOOK ｜ 藝術拼貼風格",
+        tape: "THEME: SCRAPBOOK",
+        swatches: [
+          { name: "Cream Paper", code: "#F3EBDD", bg: "#F3EBDD" },
+          { name: "Burgundy", code: "#8E2927", bg: "#8E2927" },
+          { name: "Vintage Blue", code: "#587D91", bg: "#587D91" },
+          { name: "Forest Green", code: "#69745C", bg: "#69745C" },
+          { name: "Dark Brown", code: "#493A34", bg: "#493A34" }
+        ]
+      },
+      refined: {
+        name: "Refined ｜ 高級質感",
+        desc: "高級品牌設計、建築與工藝美學。大量沉靜留白、極細分割線、純淨幾何構圖，展現安靜高級的閱覽品味。",
+        badge: "REFINED ｜ 高級質感風格",
+        tape: "THEME: REFINED",
+        swatches: [
+          { name: "Oatmeal", code: "#EAE4D8", bg: "#EAE4D8" },
+          { name: "Ivory", code: "#F7F5EF", bg: "#F7F5EF" },
+          { name: "Olive", code: "#69745C", bg: "#69745C" },
+          { name: "Cocoa", code: "#655348", bg: "#655348" },
+          { name: "Charcoal", code: "#292927", bg: "#292927" }
+        ]
+      },
+      romantic: {
+        name: "Romantic ｜ 浪漫復古",
+        desc: "香氛、時尚、生活儀式感。柔和紙張質地、典雅相框、微光花邊與漿果色澤，展現法式文學浪漫而不甜膩。",
+        badge: "ROMANTIC ｜ 浪漫復古風格",
+        tape: "THEME: ROMANTIC",
+        swatches: [
+          { name: "Cream", code: "#F5EEE8", bg: "#F5EEE8" },
+          { name: "Dusty Rose", code: "#C6A1A1", bg: "#C6A1A1" },
+          { name: "Berry Red", code: "#914B50", bg: "#914B50" },
+          { name: "Champagne", code: "#D8C6A5", bg: "#D8C6A5" },
+          { name: "Dark Brown", code: "#493B38", bg: "#493B38" }
+        ]
+      },
+      experimental: {
+        name: "Experimental ｜ 實驗知性",
+        desc: "科學原理、創新技術、未來趨勢。技術網格、索引編號、數據圖解卡片與俐落高對比標籤，知性而富現代感。",
+        badge: "EXPERIMENTAL ｜ 實驗知性風格",
+        tape: "THEME: EXPERIMENTAL",
+        swatches: [
+          { name: "Cold White", code: "#F2F3F1", bg: "#F2F3F1" },
+          { name: "Silver Gray", code: "#BFC4C5", bg: "#BFC4C5" },
+          { name: "Charcoal", code: "#25282B", bg: "#25282B" },
+          { name: "Electric Blue", code: "#416E9B", bg: "#416E9B" },
+          { name: "Lime Accent", code: "#B6C66A", bg: "#B6C66A" }
+        ]
+      }
+    };
+
+    function applyTheme(themeKey) {
+      document.body.setAttribute('data-theme', themeKey);
+
+      // 更新按鈕 active 狀態
+      document.querySelectorAll('.theme-pill-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.targetTheme === themeKey);
+      });
+
+      // 更新文案
+      const info = themeData[themeKey];
+      document.getElementById('theme-tagline').textContent = info.badge;
+      document.getElementById('theme-description').textContent = info.desc;
+      document.getElementById('theme-indicator').textContent = info.tape;
+
+      // 更新色票
+      const paletteContainer = document.getElementById('active-palette-display');
+      paletteContainer.innerHTML = info.swatches.map(s => `
+        <span class="swatch-item">
+          <span class="swatch-color" style="background-color: ${s.bg};"></span>
+          <span>${s.name} (${s.code})</span>
+        </span>
+      `).join('');
+    }
+
+    // 綁定按鈕點擊
+    document.querySelectorAll('.theme-pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyTheme(btn.dataset.targetTheme);
+      });
+    });
+
+    // 初始渲染 Scrapbook 色票
+    applyTheme('scrapbook');
+
+    // 閱讀進度條
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('read-progress');
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
+      if (bar) bar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

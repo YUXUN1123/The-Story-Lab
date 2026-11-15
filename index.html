@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE STORY LAB 事物探索研究所 — 法式浪漫復古生活探索誌</title>
+  <meta name="description" content="THE STORY LAB（事物探索研究所）是一本以探索事物背後故事為核心的線上法式生活探索雜誌，深度挖掘日常物品、設計理念與文化起源。">
+
+  <!-- 字型引入：Cormorant Garamond, Pinyon Script, 思源宋體, 思源黑體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- 樣式引用（根目錄相對路徑） -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+
+  <!-- 1. 全域頁首導覽 -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="THE STORY LAB 首頁">
+        <span class="brand-en">THE STORY LAB</span>
+        <span class="brand-zh">事物探索研究所</span>
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="切換選單" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="全站導覽">
+        <a href="index.html" class="active">Home</a>
+        <a href="categories/everyday-mysteries.html">Everyday Mysteries</a>
+        <a href="categories/design-creation.html">Design & Creation</a>
+        <a href="categories/origins-stories.html">Origins & Stories</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. 首頁刊頭（French Vintage Masthead & Hero） -->
+    <section class="hero-section lace-edge-bottom">
+      <div class="container">
+        <div class="hero-volume-tag">
+          <span class="ribbon-bow-icon" aria-hidden="true"></span>
+          <span>REVUE MENSUELLE · VOL. I · PARIS & TAIPEI</span>
+          <span class="ribbon-bow-icon" aria-hidden="true"></span>
+        </div>
+        
+        <div class="hero-subtitle-french">Le Laboratoire d'Histoires du Quotidien</div>
+        
+        <h1 class="hero-title">探索事物背後的故事，<br>看見平凡中的不平凡。</h1>
+        
+        <p class="hero-description">
+          我們深信，每件生活物件皆凝固了時間的詩意與工藝的溫度。這是一本屬於好奇心探索者的法式手帳刊物，翻開日常事物的封面，閱讀那些曾被忽略的浪漫與微小奇蹟。
+        </p>
+
+        <div class="pearl-divider" aria-hidden="true">
+          <span>• ✦ •</span>
+        </div>
+
+        <div class="hero-citation">
+          <span>« Les détails ne sont pas des détails. Ils font le design. » — Charles Eames</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 本期特選專題（Featured Story） -->
+    <section class="section-wrapper featured-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Grand Thème</h2>
+            <p class="section-subtitle">特選深入專題 · 嚴選本期焦點故事</p>
+          </div>
+        </div>
+
+        <!-- 由 main.js 從 data/articles.json 動態填入 -->
+        <div id="featured-post" class="featured-card-wrapper">
+          <div class="empty-state">
+            <span class="empty-state-badge">EN PRÉPARATION · 專題策劃中</span>
+            <h3 class="empty-state-title">首期探索專題籌備中</h3>
+            <p class="empty-state-desc">研究員正在嚴謹整理文獻資料與查證歷史檔案。第一期深度專題手帳即將出刊，敬請期待。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 三大分類探索入口（Category Portals，復古相框卡片） -->
+    <section class="section-wrapper categories-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Les Cahiers</h2>
+            <p class="section-subtitle">三大探索範疇 · 兼具知性與浪漫的觀察手帳</p>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <!-- 分類 1 -->
+          <a href="categories/everyday-mysteries.html" class="category-card">
+            <div class="category-card-inner">
+              <span class="stamp-badge category-card-stamp">CAHIER I</span>
+              <h3 class="category-card-title">Everyday Mysteries</h3>
+              <div class="category-card-title-zh">日常事物與背後原理</div>
+              <p class="category-card-desc">
+                拆解日常用品、生活細節與不可思議的物理或製造技術。為什麼易開罐拉環是槓桿工程的微型奇蹟？原子筆尖滾珠的一公釐精密如何運作？
+              </p>
+              <span class="category-card-link">Feuilleter le cahier</span>
+            </div>
+          </a>
+
+          <!-- 分類 2 -->
+          <a href="categories/design-creation.html" class="category-card">
+            <div class="category-card-inner">
+              <span class="stamp-badge category-card-stamp">CAHIER II</span>
+              <h3 class="category-card-title">Design & Creation</h3>
+              <div class="category-card-title-zh">設計哲學與創意思維</div>
+              <p class="category-card-desc">
+                剖析經典產品、建築、品牌識別與視覺符號背後的設計美學。看見大師如何透過直覺、限制與材質定義現代生活的生活道具。
+              </p>
+              <span class="category-card-link">Feuilleter le cahier</span>
+            </div>
+          </a>
+
+          <!-- 分類 3 -->
+          <a href="categories/origins-stories.html" class="category-card">
+            <div class="category-card-inner">
+              <span class="stamp-badge category-card-stamp">CAHIER III</span>
+              <h3 class="category-card-title">Origins & Stories</h3>
+              <div class="category-card-title-zh">歷史起源與文化演變</div>
+              <p class="category-card-desc">
+                追尋物品、符號與文化習俗的誕生起點。從牛仔褲金屬鉚釘的淘金熱起源，到條形碼沙灘靈感，還原歷史長河中的關鍵轉折。
+              </p>
+              <span class="category-card-link">Feuilleter le cahier</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 最新探索文章（Latest Dispatches） -->
+    <section class="section-wrapper latest-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Derniers Articles</h2>
+            <p class="section-subtitle">最新探索發布 · 持續更新的事物手記</p>
+          </div>
+        </div>
+
+        <!-- 由 main.js 動態渲染卡片列表 -->
+        <div id="latest-posts" class="articles-grid">
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <span class="empty-state-badge">CURATING · 採集中</span>
+            <h3 class="empty-state-title">暫無發布文章</h3>
+            <p class="empty-state-desc">研究員正在嚴謹整理文獻，第一期專題文章即將上線。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 關於我們精選邀請（About Snippet） -->
+    <section class="section-wrapper about-snippet-section" style="background-color: var(--color-surface); border-top: 1px solid var(--color-foggy-rose); border-bottom: 1px solid var(--color-foggy-rose);">
+      <div class="container" style="text-align: center; max-width: 680px; padding: 4rem 1.5rem;">
+        <span class="stamp-badge" style="margin-bottom: 1.5rem;">ÉDITORIAL & ÉTHIQUE</span>
+        <h2 style="font-size: 2.1rem; margin-bottom: 1.25rem;">我們如何研究與編輯？</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.95; margin-bottom: 2.25rem;">
+          THE STORY LAB 拒絕浮淺的農場冷知識。每篇專題均由研究員交叉比對官方專利檔案、博物館文獻與權威設計專書，力求在講述迷人故事的同時，保有嚴謹的事實基準。
+        </p>
+        <a href="about.html" class="category-card-link" style="font-size: 1rem; border-bottom: 1px solid var(--color-accent); padding-bottom: 3px;">
+          閱讀本所創立宗旨與編輯倫理 →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. 全域頁尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-en">THE STORY LAB</div>
+          <div style="font-family: var(--font-serif-zh); font-size: 0.85rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 0.85rem;">事物探索研究所</div>
+          <p class="brand-desc">
+            專注於挖掘日常事物、設計哲學與歷史起源背後的故事。以法式浪漫與知性兼備的編輯雜誌視角，帶領讀者重新看見身邊的世界。
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Les Cahiers</h3>
+          <ul class="footer-links">
+            <li><a href="categories/everyday-mysteries.html">Everyday Mysteries</a></li>
+            <li><a href="categories/design-creation.html">Design & Creation</a></li>
+            <li><a href="categories/origins-stories.html">Origins & Stories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">À Propos</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">關於本所宗旨</a></li>
+            <li><a href="about.html#ethics">編輯與查證規範</a></li>
+            <li><a href="about.html#license">版權與引用說明</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 THE STORY LAB（事物探索研究所）. Tous droits réservés.</p>
+        <p>Revue d'exploration du quotidien · Hébergé sur GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 核心交互腳本 -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

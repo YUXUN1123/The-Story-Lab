@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- 背景：從復古紙質暖棕漸變到現代科技冷炭墨綠 -->
+    <linearGradient id="commGradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D231E"/>
+      <stop offset="35%" stop-color="#3A2F2B"/>
+      <stop offset="70%" stop-color="#212F35"/>
+      <stop offset="100%" stop-color="#142024"/>
+    </linearGradient>
+
+    <!-- 火漆封蠟漸層 (Wax Seal) -->
+    <radialGradient id="waxSealGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#D64848"/>
+      <stop offset="50%" stop-color="#9C2727"/>
+      <stop offset="100%" stop-color="#5E1414"/>
+    </radialGradient>
+
+    <!-- 數位光流漸層 -->
+    <linearGradient id="cyberStream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4B08C" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#84B8A5" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C2E6DC" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="675" fill="url(#commGradBg)"/>
+
+  <!-- 左側：古老羊皮紙信件與火漆印 -->
+  <g transform="translate(360, 360)">
+    <!-- 羊皮紙信封本體（微傾斜） -->
+    <g transform="rotate(-8)">
+      <rect x="-190" y="-130" width="380" height="260" rx="6" fill="#EDE4D5" stroke="#C4B49F" stroke-width="2"/>
+      
+      <!-- 信封背面折線紋路 -->
+      <path d="M -190 -130 L 0 30 L 190 -130" fill="none" stroke="#D1C1AA" stroke-width="2"/>
+      <path d="M -190 130 L -40 0" fill="none" stroke="#D1C1AA" stroke-width="1.5"/>
+      <path d="M 190 130 L 40 0" fill="none" stroke="#D1C1AA" stroke-width="1.5"/>
+
+      <!-- 信件手寫字跡質感微線條 -->
+      <g stroke="#91806F" stroke-width="1" stroke-dasharray="8, 4" opacity="0.4">
+        <line x1="-140" y1="-70" x2="-20" y2="-70"/>
+        <line x1="-140" y1="-50" x2="60" y2="-50"/>
+        <line x1="-140" y1="-30" x2="20" y2="-30"/>
+      </g>
+
+      <!-- 火漆封蠟印（中心） -->
+      <circle cx="0" cy="20" r="38" fill="url(#waxSealGrad)"/>
+      <circle cx="0" cy="20" r="32" fill="none" stroke="#FFA7A7" stroke-width="1.5" opacity="0.5"/>
+      <!-- 印章花紋：羽毛筆 -->
+      <path d="M -10 32 Q 5 18 10 8 Q 6 18 -4 28 Z" fill="#FFEFEF" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- 中間至右側：轉化為數位封包與光纖脈衝光流 -->
+  <g>
+    <!-- 連接曲線 -->
+    <path d="M 520 330 C 620 310, 680 260, 780 270 C 880 280, 930 380, 1050 350" 
+          fill="none" stroke="url(#cyberStream)" stroke-width="3" stroke-dasharray="12, 6"/>
+    
+    <path d="M 500 370 C 640 400, 720 370, 840 410 C 960 450, 1000 320, 1100 310" 
+          fill="none" stroke="url(#cyberStream)" stroke-width="1.8" stroke-dasharray="6, 8" opacity="0.6"/>
+
+    <!-- 散落的數位資料封包方塊 (Data Packets) -->
+    <g fill="#A9D6C9" opacity="0.85">
+      <rect x="650" y="275" width="12" height="12" rx="2" transform="rotate(20 650 275)"/>
+      <rect x="730" y="240" width="16" height="16" rx="3" transform="rotate(45 730 240)"/>
+      <rect x="820" y="310" width="10" height="10" rx="2" transform="rotate(10 820 310)"/>
+      <rect x="910" y="360" width="14" height="14" rx="2" transform="rotate(30 910 360)"/>
+    </g>
+
+    <!-- 經典象徵符號：光暈中的「@」與終端游標 (ARPANET 1971) -->
+    <g transform="translate(940, 260)">
+      <!-- 圓形終端介面框 -->
+      <circle cx="0" cy="0" r="95" fill="#132328" stroke="#3E6168" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="88" fill="none" stroke="#5B8D96" stroke-width="1" stroke-dasharray="4, 4" opacity="0.4"/>
+      
+      <!-- 「@」巨型文字符號 -->
+      <text x="0" y="28" font-family="'Cormorant Garamond', serif" font-size="88" font-weight="700" fill="#9AE3D1" text-anchor="middle">@</text>
+      
+      <!-- 終端閃爍游標方塊 -->
+      <rect x="42" y="10" width="10" height="18" fill="#5CE6C2" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- 標題與歷史縱深文字 -->
+  <g font-family="'Cormorant Garamond', 'Noto Serif TC', serif" fill="#F1E7DD">
+    <text x="80" y="90" font-size="14" letter-spacing="4" opacity="0.8">POSTAL RELAYS TO DIGITAL PACKETS</text>
+    <text x="80" y="125" font-size="28" font-weight="600" letter-spacing="2">隔空對話的演化史：時間延遲與心靈距離</text>
+    <text x="80" y="150" font-size="13" font-family="'Noto Sans TC', sans-serif" letter-spacing="1" opacity="0.7">1840 Penny Black · 1971 Ray Tomlinson @ · Asynchronous Intimacy</text>
+  </g>
+
+  <!-- 右下角銘文 -->
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#A5B8BA" opacity="0.6" text-anchor="end">
+    <text x="1120" y="600">From Wax Seals to Millisecond Signals</text>
+    <text x="1120" y="620">THE STORY LAB · Origins &amp; Stories Archive</text>
+  </g>
+</svg>

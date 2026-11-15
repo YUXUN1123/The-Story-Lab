@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 530" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="pearlCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7"/>
+      <stop offset="100%" stop-color="#F3ECE4"/>
+    </linearGradient>
+
+    <!-- 文石晶體微米薄板漸層 -->
+    <linearGradient id="aragonitePlate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EBF4F5"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2EEF0"/>
+    </linearGradient>
+
+    <filter id="pearlCardShadow" x="-5%" y="-5%" width="110%" height="114%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#493A34" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- 背景底板 -->
+  <rect width="1020" height="530" rx="16" fill="url(#pearlCardBg)" stroke="#DDD2C4" stroke-width="1.5"/>
+
+  <!-- 標題區域 -->
+  <g transform="translate(50, 42)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', serif" font-size="14" letter-spacing="3" fill="#755E6E" font-weight="600">NANOMATERIAL ARCHITECTURE · OPTICAL INTERFERENCE</text>
+    <text x="0" y="28" font-family="'Noto Serif TC', serif" font-size="20" fill="#2E241E" font-weight="700">珍珠層「磚牆微結構」與薄膜光學干涉原理</text>
+  </g>
+
+  <!-- 左側卡片：珍珠層微觀「磚牆」模型 (Brick & Mortar Model) -->
+  <g transform="translate(50, 105)">
+    <rect width="440" height="385" rx="12" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#pearlCardShadow)"/>
+    
+    <text x="25" y="32" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#755E6E" letter-spacing="1">FIGURE A · BRICK &amp; MORTAR</text>
+    <text x="25" y="55" font-family="'Noto Serif TC', serif" font-size="16" font-weight="600" fill="#2E241E">文石晶片與硬蛋白層疊</text>
+
+    <!-- 磚牆層次示意 -->
+    <g transform="translate(35, 88)">
+      <!-- 第 1 層磚（文石晶片，厚度約 0.5 微米） -->
+      <rect x="0" y="0" width="115" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="125" y="0" width="125" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="260" y="0" width="110" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+
+      <!-- 蛋白膠質層 (Mortar) -->
+      <rect x="0" y="21" width="370" height="5" fill="#C59B79" opacity="0.65"/>
+
+      <!-- 第 2 層磚（交錯排列） -->
+      <rect x="0" y="29" width="65" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="75" y="29" width="130" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="215" y="29" width="130" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="355" y="29" width="15" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+
+      <!-- 蛋白膠質層 -->
+      <rect x="0" y="50" width="370" height="5" fill="#C59B79" opacity="0.65"/>
+
+      <!-- 第 3 層磚 -->
+      <rect x="0" y="58" width="125" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="135" y="58" width="115" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="260" y="58" width="110" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+
+      <!-- 蛋白膠質層 -->
+      <rect x="0" y="79" width="370" height="5" fill="#C59B79" opacity="0.65"/>
+
+      <!-- 第 4 層磚 -->
+      <rect x="0" y="87" width="85" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="95" y="87" width="135" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+      <rect x="240" y="87" width="130" height="18" rx="2" fill="url(#aragonitePlate)" stroke="#AEC2C5" stroke-width="1"/>
+    </g>
+
+    <!-- 成分標籤 -->
+    <g transform="translate(25, 222)" font-family="'Noto Sans TC', sans-serif" font-size="11.5">
+      <text x="0" y="0" fill="#3D322B" font-weight="700">🧱「磚」：文石（Aragonite, CaCO₃ 晶片，厚約 400-600 奈米）</text>
+      <text x="0" y="22" fill="#755239" font-weight="700">🧪「水泥」：硬蛋白基質（Conchiolin 膠質，厚約 20-30 奈米）</text>
+    </g>
+
+    <!-- 底部說明文字盒（分行保護） -->
+    <rect x="20" y="295" width="400" height="70" rx="6" fill="#F8F4EE"/>
+    <text x="32" y="322" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="32" dy="0">數千層微米晶片嚴密堆疊，層間厚度剛好介於可見光波長</tspan>
+      <tspan x="32" dy="20">範圍（400–700 奈米），為隨後的光學干涉與色散現象</tspan>
+      <tspan x="32" dy="20">創造了天然完美的物理舞台。</tspan>
+    </text>
+  </g>
+
+  <!-- 右側卡片：薄膜干涉與暈彩產生 (Thin-Film Interference) -->
+  <g transform="translate(510, 105)">
+    <rect width="460" height="385" rx="12" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#pearlCardShadow)"/>
+    
+    <text x="25" y="32" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#755E6E" letter-spacing="1">FIGURE B · THIN-FILM INTERFERENCE</text>
+    <text x="25" y="55" font-family="'Noto Serif TC', serif" font-size="16" font-weight="600" fill="#2E241E">光波的反射、折射與建設性干涉</text>
+
+    <!-- 光路圖解 -->
+    <g transform="translate(55, 80)">
+      <!-- 入射白光光束 -->
+      <line x1="20" y1="10" x2="110" y2="70" stroke="#E29E38" stroke-width="3"/>
+      <polygon points="104,62 110,70 100,72" fill="#E29E38"/>
+      <text x="10" y="5" font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#996317" font-weight="700">入射光 (白光)</text>
+
+      <!-- 珍珠表面層 1 (反射光 A) -->
+      <line x1="110" y1="70" x2="190" y2="12" stroke="#4AA391" stroke-width="2.5"/>
+      <text x="195" y="10" font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#2D7264" font-weight="700">反射光波 A</text>
+
+      <!-- 晶片內部折射 -->
+      <line x1="110" y1="70" x2="135" y2="115" stroke="#C26A76" stroke-width="2" stroke-dasharray="4,2"/>
+
+      <!-- 第 2 層晶片界面反射 (反射光 B) -->
+      <line x1="135" y1="115" x2="215" y2="58" stroke="#B85D88" stroke-width="2.5"/>
+      <text x="222" y="60" font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#84395E" font-weight="700">反射光波 B (相位疊加)</text>
+
+      <!-- 雙層晶片幾何輪廓 -->
+      <rect x="70" y="70" width="280" height="40" fill="#EBF4F5" stroke="#B0C8CD" stroke-width="1" opacity="0.65"/>
+      <text x="255" y="94" font-family="'Noto Sans TC', sans-serif" font-size="10.5" fill="#5A777E">文石晶片層 1</text>
+      
+      <rect x="70" y="115" width="280" height="40" fill="#F7F1EC" stroke="#C59B79" stroke-width="1" opacity="0.65"/>
+      <text x="255" y="139" font-family="'Noto Sans TC', sans-serif" font-size="10.5" fill="#755239">文石晶片層 2</text>
+    </g>
+
+    <!-- 底部說明文字盒（使用 tspan 精準分行，徹底避免文字超出邊界） -->
+    <rect x="25" y="275" width="410" height="90" rx="6" fill="#F8F4EE"/>
+    <text x="38" y="300" font-family="'Noto Sans TC', sans-serif" font-size="11.5">
+      <tspan x="38" dy="0" font-weight="700" fill="#2E241E">光波干涉效應：</tspan>
+      <tspan fill="#5A473E">從不同深度界面反射出的光波產生光程差，</tspan>
+      <tspan x="38" dy="20" fill="#5A473E">使得特定波長（如玫瑰粉、孔雀綠）相互疊加增強。</tspan>
+      <tspan x="38" dy="20" font-weight="700" fill="#755E6E">轉動珠體時呈現流動幻彩的「暈彩（Orient）」，</tspan>
+      <tspan x="38" dy="18" fill="#5A473E">此為純粹的物理結構色，而非化學顏料色素。</tspan>
+    </text>
+  </g>
+</svg>

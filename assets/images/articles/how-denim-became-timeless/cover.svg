@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- 丹寧經典靛藍漸層 -->
+    <linearGradient id="denimIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2B3A"/>
+      <stop offset="40%" stop-color="#233D56"/>
+      <stop offset="80%" stop-color="#1E3348"/>
+      <stop offset="100%" stop-color="#121D28"/>
+    </linearGradient>
+
+    <!-- 黃銅鉚釘漸層金屬光 -->
+    <radialGradient id="brassRivet" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#F2D184"/>
+      <stop offset="35%" stop-color="#D49E43"/>
+      <stop offset="70%" stop-color="#9C6B28"/>
+      <stop offset="100%" stop-color="#5E3E13"/>
+    </radialGradient>
+
+    <!-- 經典橘黃粗棉縫線 -->
+    <pattern id="stitchPattern" width="30" height="10" patternUnits="userSpaceOnUse">
+      <line x1="2" y1="5" x2="20" y2="5" stroke="#E59934" stroke-width="3" stroke-linecap="round"/>
+    </pattern>
+
+    <!-- 丹寧 3x1 斜紋交織幾何紋理 -->
+    <pattern id="twillWeave" width="16" height="16" patternUnits="userSpaceOnUse">
+      <!-- 經紗（藍色）與緯紗（白本色）交織 -->
+      <line x1="0" y1="0" x2="16" y2="16" stroke="#486D8E" stroke-width="2.5" opacity="0.35"/>
+      <line x1="4" y1="0" x2="20" y2="16" stroke="#EAE5DC" stroke-width="1.2" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景：厚重深靛藍斜紋布 -->
+  <rect width="1200" height="675" fill="url(#denimIndigo)"/>
+  <rect width="1200" height="675" fill="url(#twillWeave)"/>
+
+  <!-- 口袋幾何結構與車縫弧線 (Arcuate Stitching) -->
+  <g transform="translate(600, 360)">
+    <!-- 牛仔褲後口袋剪影 -->
+    <path d="M -220 -150 L 220 -150 L 220 120 L 0 250 L -220 120 Z" 
+          fill="#1A2D40" stroke="#162534" stroke-width="6" opacity="0.95"/>
+    
+    <!-- 雙道經典橘黃車縫線 -->
+    <path d="M -210 -140 L 210 -140 L 210 115 L 0 240 L -210 115 Z" 
+          fill="none" stroke="#E59934" stroke-width="2.8" stroke-dasharray="10, 6" opacity="0.9"/>
+    
+    <path d="M -200 -132 L 200 -132 L 200 108 L 0 230 L -200 108 Z" 
+          fill="none" stroke="#E59934" stroke-width="2.8" stroke-dasharray="10, 6" opacity="0.9"/>
+
+    <!-- 口袋雙弧線（海鷗線 / 鷹翅弧線） -->
+    <path d="M -170 -40 Q -85 50 0 -10 Q 85 50 170 -40" 
+          fill="none" stroke="#E59934" stroke-width="3.5" stroke-dasharray="9, 5" opacity="0.85"/>
+
+    <!-- 經典銅鉚釘：左口袋上角 -->
+    <g transform="translate(-205, -135)">
+      <circle cx="0" cy="0" r="18" fill="url(#brassRivet)"/>
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#42290B" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="0" cy="0" r="6" fill="#FDF3CE" opacity="0.4"/>
+      <!-- 刻印小點 -->
+      <circle cx="-7" cy="0" r="1.5" fill="#42290B"/>
+      <circle cx="7" cy="0" r="1.5" fill="#42290B"/>
+      <circle cx="0" cy="-7" r="1.5" fill="#42290B"/>
+      <circle cx="0" cy="7" r="1.5" fill="#42290B"/>
+    </g>
+
+    <!-- 經典銅鉚釘：右口袋上角 -->
+    <g transform="translate(205, -135)">
+      <circle cx="0" cy="0" r="18" fill="url(#brassRivet)"/>
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#42290B" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="0" cy="0" r="6" fill="#FDF3CE" opacity="0.4"/>
+      <circle cx="-7" cy="0" r="1.5" fill="#42290B"/>
+      <circle cx="7" cy="0" r="1.5" fill="#42290B"/>
+      <circle cx="0" cy="-7" r="1.5" fill="#42290B"/>
+      <circle cx="0" cy="7" r="1.5" fill="#42290B"/>
+    </g>
+
+    <!-- 零錢小袋輪廓示意（右上方） -->
+    <path d="M 120 -150 L 120 -240 L 220 -240 L 220 -150" 
+          fill="none" stroke="#E59934" stroke-width="2.5" stroke-dasharray="8, 5" opacity="0.7"/>
+    <circle cx="125" cy="-235" r="11" fill="url(#brassRivet)"/>
+  </g>
+
+  <!-- 歷史圖紙與工藝文字排版 -->
+  <g font-family="'Cormorant Garamond', 'Noto Serif TC', serif" fill="#E6D3B5">
+    <text x="80" y="90" font-size="14" letter-spacing="4" opacity="0.8">MAY 20, 1873 · PATENT NO. 139,121</text>
+    <text x="80" y="125" font-size="28" font-weight="600" letter-spacing="2">丹寧的世紀蛻變：從加固工裝到反叛符號</text>
+    <text x="80" y="150" font-size="13" font-family="'Noto Sans TC', sans-serif" letter-spacing="1" opacity="0.7">Serge de Nîmes · Jacob Davis Rivet · Counterculture Icon</text>
+  </g>
+
+  <!-- 丹寧布料解構標記 -->
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#C7D7E5" opacity="0.65">
+    <line x1="80" y1="560" x2="280" y2="560" stroke="#C7D7E5" stroke-width="1"/>
+    <circle cx="280" cy="560" r="3" fill="#E59934"/>
+    <text x="80" y="550">WARP: Indigo-Dyed Cotton Yarn (經紗)</text>
+    <text x="80" y="580">WEFT: Undyed Natural Cotton Yarn (緯紗)</text>
+    <text x="80" y="600">3/1 Right-Hand Twill Construction (三上一下斜紋)</text>
+  </g>
+
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#E6D3B5" opacity="0.6" text-anchor="end">
+    <text x="1120" y="600">San Francisco Mining Apparel to Global Wardrobe</text>
+    <text x="1120" y="620">THE STORY LAB · Design &amp; Creation Archive</text>
+  </g>
+</svg>

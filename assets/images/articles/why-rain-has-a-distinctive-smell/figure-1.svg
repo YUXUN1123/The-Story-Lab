@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 520" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="figBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8F4"/>
+      <stop offset="100%" stop-color="#F3ECE4"/>
+    </linearGradient>
+
+    <linearGradient id="dropStepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A5C7BE"/>
+      <stop offset="100%" stop-color="#5B8277"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#55443B" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- 卡片底色 -->
+  <rect width="1060" height="520" rx="16" fill="url(#figBg)" stroke="#E0D5C7" stroke-width="1.5"/>
+
+  <!-- 標題區域 -->
+  <g transform="translate(50, 42)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', serif" font-size="14" letter-spacing="3" fill="#6B5950" font-weight="600">MECHANISM ANALYSIS · MIT 2015 FLUID DYNAMICS STUDY</text>
+    <text x="0" y="28" font-family="'Noto Serif TC', serif" font-size="20" fill="#2E241E" font-weight="700">雨滴撞擊土壤並向空中釋放微型氣膠的四步機制</text>
+  </g>
+
+  <!-- 四個階段橫向卡片網格 -->
+
+  <!-- STAGE 01: 雨滴接觸撞擊 -->
+  <g transform="translate(40, 105)">
+    <rect width="230" height="375" rx="10" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#shadow)"/>
+    <text x="18" y="30" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#758B83" letter-spacing="1">STAGE 01</text>
+    <text x="18" y="52" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E">雨滴接觸撞擊</text>
+    
+    <!-- 繪圖區 -->
+    <g transform="translate(115, 155)">
+      <!-- 土壤多孔基底 -->
+      <rect x="-95" y="50" width="190" height="45" fill="#D9C9B8" rx="4"/>
+      <circle cx="-60" cy="65" r="7" fill="#9C8572"/>
+      <circle cx="-15" cy="72" r="10" fill="#9C8572"/>
+      <circle cx="45" cy="62" r="8" fill="#9C8572"/>
+      <!-- 下降雨滴 -->
+      <path d="M 0 -65 C -25 -18, -32 20, 0 45 C 32 20, 25 -18, 0 -65 Z" fill="url(#dropStepGrad)" opacity="0.9"/>
+      <!-- 下降動態箭頭 -->
+      <line x1="0" y1="-85" x2="0" y2="-70" stroke="#758B83" stroke-width="2.5"/>
+      <polygon points="-4,-70 4,-70 0,-64" fill="#758B83"/>
+    </g>
+
+    <!-- 階段說明文字（分行排版，嚴格限制在 230px 卡片內） -->
+    <rect x="14" y="270" width="202" height="85" rx="6" fill="#F8F4EE"/>
+    <text x="24" y="295" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="24" dy="0">雨滴以每秒數公尺高速</tspan>
+      <tspan x="24" dy="19">墜落，猛烈撞擊乾燥疏鬆</tspan>
+      <tspan x="24" dy="19">的多孔土壤表面。</tspan>
+    </text>
+  </g>
+
+  <!-- STAGE 02: 困裹微型氣泡 -->
+  <g transform="translate(290, 105)">
+    <rect width="230" height="375" rx="10" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#shadow)"/>
+    <text x="18" y="30" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#758B83" letter-spacing="1">STAGE 02</text>
+    <text x="18" y="52" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E">困裹微型氣泡</text>
+
+    <!-- 繪圖區 -->
+    <g transform="translate(115, 155)">
+      <!-- 土壤基底 -->
+      <rect x="-95" y="50" width="190" height="45" fill="#D9C9B8" rx="4"/>
+      <circle cx="-60" cy="65" r="7" fill="#9C8572"/>
+      <circle cx="-15" cy="72" r="10" fill="#9C8572"/>
+      <circle cx="45" cy="62" r="8" fill="#9C8572"/>
+      <!-- 扁平水滴攤開在地面 -->
+      <path d="M -85 50 C -80 -5, 80 -5, 85 50 Z" fill="url(#dropStepGrad)" opacity="0.85"/>
+      <!-- 底部困住的微氣泡 -->
+      <circle cx="-45" cy="38" r="6" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <circle cx="-15" cy="34" r="8" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <circle cx="20" cy="36" r="7" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <circle cx="50" cy="40" r="5" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+    </g>
+
+    <!-- 說明文字 -->
+    <rect x="14" y="270" width="202" height="85" rx="6" fill="#F8F4EE"/>
+    <text x="24" y="295" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="24" dy="0">水滴表面張力密封孔隙，</tspan>
+      <tspan x="24" dy="19">迅速將土壤空氣包覆，</tspan>
+      <tspan x="24" dy="19">在水體底部形成微氣泡。</tspan>
+    </text>
+  </g>
+
+  <!-- STAGE 03: 氣泡如香檳上浮 -->
+  <g transform="translate(540, 105)">
+    <rect width="230" height="375" rx="10" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#shadow)"/>
+    <text x="18" y="30" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#758B83" letter-spacing="1">STAGE 03</text>
+    <text x="18" y="52" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E">氣泡如香檳上浮</text>
+
+    <!-- 繪圖區 -->
+    <g transform="translate(115, 155)">
+      <!-- 土壤基底 -->
+      <rect x="-95" y="50" width="190" height="45" fill="#D9C9B8" rx="4"/>
+      <!-- 攤平水滴 -->
+      <path d="M -85 50 C -80 0, 80 0, 85 50 Z" fill="url(#dropStepGrad)" opacity="0.85"/>
+      <!-- 上浮中的氣泡帶動土壤氣味分子 -->
+      <circle cx="-35" cy="18" r="6" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <circle cx="5" cy="10" r="8" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <circle cx="40" cy="16" r="7" fill="#FFFFFF" stroke="#48685F" stroke-width="1.5"/>
+      <!-- 微小流線虛線 -->
+      <path d="M -35 38 L -35 26" stroke="#48685F" stroke-dasharray="2,2"/>
+      <path d="M 5 33 L 5 20" stroke="#48685F" stroke-dasharray="2,2"/>
+      <path d="M 40 36 L 40 25" stroke="#48685F" stroke-dasharray="2,2"/>
+    </g>
+
+    <!-- 說明文字 -->
+    <rect x="14" y="270" width="202" height="85" rx="6" fill="#F8F4EE"/>
+    <text x="24" y="295" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="24" dy="0">浮力驅使氣泡在幾百微秒</tspan>
+      <tspan x="24" dy="19">內穿透水滴，並將土壤</tspan>
+      <tspan x="24" dy="19">氣味分子吸附於界面。</tspan>
+    </text>
+  </g>
+
+  <!-- STAGE 04: 破裂釋放氣膠 -->
+  <g transform="translate(790, 105)">
+    <rect width="230" height="375" rx="10" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#shadow)"/>
+    <text x="18" y="30" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#B9878C" letter-spacing="1">STAGE 04</text>
+    <text x="18" y="52" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E">破裂射出微氣膠</text>
+
+    <!-- 繪圖區 -->
+    <g transform="translate(115, 155)">
+      <!-- 土壤基底 -->
+      <rect x="-95" y="50" width="190" height="45" fill="#D9C9B8" rx="4"/>
+      <!-- 水滴薄膜 -->
+      <path d="M -85 50 C -80 8, 80 8, 85 50 Z" fill="url(#dropStepGrad)" opacity="0.85"/>
+      <!-- 氣泡頂端破裂 -->
+      <path d="M -8 10 Q 0 4 8 10" stroke="#48685F" stroke-width="1.5" fill="none"/>
+      <!-- 散逸的小圓點氣膠 (Aerosols) -->
+      <circle cx="-28" cy="-24" r="3.5" fill="#48685F"/>
+      <circle cx="0" cy="-40" r="4.5" fill="#B9878C"/>
+      <circle cx="32" cy="-22" r="3" fill="#48685F"/>
+      <circle cx="-14" cy="-52" r="3" fill="#758B83"/>
+      <circle cx="20" cy="-58" r="4" fill="#B9878C"/>
+      <circle cx="5" cy="-76" r="2.5" fill="#48685F"/>
+      <!-- 向上噴射微細虛線 -->
+      <line x1="0" y1="5" x2="0" y2="-18" stroke="#B9878C" stroke-width="1.5" stroke-dasharray="2,2"/>
+    </g>
+
+    <!-- 說明文字 -->
+    <rect x="14" y="270" width="202" height="85" rx="6" fill="#F8F4EE"/>
+    <text x="24" y="295" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="24" dy="0">氣泡破裂瞬間釋放數百顆</tspan>
+      <tspan x="24" dy="19">微氣膠，攜帶土臭素與</tspan>
+      <tspan x="24" dy="19">植物精油隨微風升騰。</tspan>
+    </text>
+  </g>
+</svg>

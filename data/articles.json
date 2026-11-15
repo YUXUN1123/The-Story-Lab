@@ -1,0 +1,115 @@
+[
+  {
+    "id": "why-perfume-has-top-middle-base-notes",
+    "slug": "why-perfume-has-top-middle-base-notes",
+    "title": "香水為什麼有前調、中調、後調？",
+    "subtitle": "氣味的時間交響詩：揭開香氛分子揮發率與金字塔結構的科學真相",
+    "category": "everyday-mysteries",
+    "category_name": "Everyday Mysteries",
+    "publish_date": "2026-11-15",
+    "read_time": "6 MIN READ",
+    "target_subject": "香水前中後調",
+    "summary": "為什麼同一瓶香水，剛噴上與幾小時後聞起來截然不同？這不是香氣分段跳轉的魔法，而是一場由分子量、蒸氣壓與皮膚溫度共譜的連續揮發交響曲。",
+    "url": "articles/why-perfume-has-top-middle-base-notes.html",
+    "cover_image": "assets/images/articles/why-perfume-has-top-middle-base-notes/cover.svg",
+    "cover_caption": "調香台上的時間維度：香水並非靜態的氣味配方，而是一場由不同揮發速率分子所驅動的時間流動。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["日常奧秘", "嗅覺科學", "香氛化學", "物理揮發"],
+    "featured": true,
+    "visual_theme": "romantic",
+    "related_articles": [
+      "why-rain-has-a-distinctive-smell",
+      "why-pearls-have-different-colors"
+    ]
+  },
+  {
+    "id": "why-rain-has-a-distinctive-smell",
+    "slug": "why-rain-has-a-distinctive-smell",
+    "title": "為什麼雨後的空氣有一種特別的味道？",
+    "subtitle": "大地初雨的嗅覺詩篇：土臭素、放線菌與雨滴撞擊微氣膠的流體力學真相",
+    "category": "everyday-mysteries",
+    "category_name": "Everyday Mysteries",
+    "publish_date": "2026-11-15",
+    "read_time": "7 MIN READ",
+    "target_subject": "雨後氣味 Petrichor",
+    "summary": "久旱初雨的大地，空氣中總有一股清冽而濕潤的泥土芳香。這個被稱為 Petrichor 的氣味究竟從何而來？本文揭開放線菌、土臭素與麻省理工學院高速攝影下的微型氣膠噴射真相。",
+    "url": "articles/why-rain-has-a-distinctive-smell.html",
+    "cover_image": "assets/images/articles/why-rain-has-a-distinctive-smell/cover.svg",
+    "cover_caption": "雨落大地的微觀交響：雨後的氣味並非單純來自水，而是乾燥土壤中細菌代謝物、植物分泌油脂與物理噴射作用共譜的結果。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["日常奧秘", "潮土油", "氣膠流體", "微生物學", "嗅覺科學"],
+    "featured": true,
+    "visual_theme": "experimental",
+    "related_articles": [
+      "why-perfume-has-top-middle-base-notes",
+      "why-pearls-have-different-colors"
+    ]
+  },
+  {
+    "id": "how-denim-became-timeless",
+    "slug": "how-denim-became-timeless",
+    "title": "牛仔褲如何從淘金熱工裝，變成跨越世紀的時尚符號？",
+    "subtitle": "藍色傳奇的物質文化史：金屬鉚釘、斜紋布料與叛逆青年的跨階級蛻變",
+    "category": "design-creation",
+    "category_name": "Design & Creation",
+    "publish_date": "2026-11-15",
+    "read_time": "8 MIN READ",
+    "target_subject": "牛仔褲與丹寧文化",
+    "summary": "從 1873 年舊金山淘金熱的耐磨金屬鉚釘工裝褲，到 1950 年代好萊塢反叛青年的文化制服，再到當代高級時裝週的常客。解構牛仔褲跨越百年的演變奇蹟。",
+    "url": "articles/how-denim-became-timeless.html",
+    "cover_image": "assets/images/articles/how-denim-became-timeless/cover.svg",
+    "cover_caption": "穿在身上的現代史：牛仔褲從未被刻意設計成時尚精品，其經典樣貌全源自 19 世紀礦工應對嚴酷勞動時的實用功能考量。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["設計與造物", "工裝美學", "文化符號", "紡織工藝", "反叛精神"],
+    "featured": true,
+    "visual_theme": "scrapbook",
+    "related_articles": [
+      "from-letters-to-email"
+    ]
+  },
+  {
+    "id": "why-pearls-have-different-colors",
+    "slug": "why-pearls-have-different-colors",
+    "title": "珍珠的顏色從哪裡來？",
+    "subtitle": "海洋與光學的微觀編織：解構珍珠層磚牆結構、天然色素與薄膜光學干涉",
+    "category": "everyday-mysteries",
+    "category_name": "Everyday Mysteries",
+    "publish_date": "2026-11-15",
+    "read_time": "7 MIN READ",
+    "target_subject": "珍珠成色與微觀結構",
+    "summary": "從純淨無暇的白珠、柔和神祕的粉光，到攝人心魄的大溪地黑珍珠與南洋金珠。解開文石晶體、硬蛋白與薄膜干涉的珠寶科學之謎。",
+    "url": "articles/why-pearls-have-different-colors.html",
+    "cover_image": "assets/images/articles/why-pearls-have-different-colors/cover.svg",
+    "cover_caption": "深海裡的奈米奇蹟：珍珠的色彩並非單一的表面顏料，而是軟體動物的外套膜分泌、微米晶體堆疊與光線干涉共譜的三維光學盛宴。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["日常奧秘", "珠寶科學", "結構色", "奈米文石", "薄膜干涉"],
+    "featured": false,
+    "visual_theme": "romantic",
+    "related_articles": [
+      "why-perfume-has-top-middle-base-notes",
+      "why-rain-has-a-distinctive-smell"
+    ]
+  },
+  {
+    "id": "from-letters-to-email",
+    "slug": "from-letters-to-email",
+    "title": "從驛站、郵票到電子郵件：我們是如何學會「隔空對話」的？",
+    "subtitle": "跨越時空的媒介演化史：時間延遲、非同步書寫與現代連線焦慮的心理變奏",
+    "category": "origins-stories",
+    "category_name": "Origins & Stories",
+    "publish_date": "2026-11-15",
+    "read_time": "8 MIN READ",
+    "target_subject": "遠距通訊演化史",
+    "summary": "從古代帝國的驛馬飛馳、1840 年改變世界的黑便士郵票，到 1971 年 ARPANET 上誕生的「@」符號。一場關於人類如何跨越地理與時間尺度、重塑心靈對話距離的傳播技術史。",
+    "url": "articles/from-letters-to-email.html",
+    "cover_image": "assets/images/articles/from-letters-to-email/cover.svg",
+    "cover_caption": "訊號的旅程：從紙張摺疊、火漆封緘的實體等待，到毫秒抵達的數位封包，人類通訊史不僅是速度的征服，更是思維節奏的根本重構。",
+    "cover_credit": "THE STORY LAB Archive",
+    "tags": ["起源與故事", "通訊技術史", "黑便士郵票", "傳播心理學", "非同步連結"],
+    "featured": true,
+    "visual_theme": "refined",
+    "related_articles": [
+      "how-denim-became-timeless"
+    ]
+  }
+]

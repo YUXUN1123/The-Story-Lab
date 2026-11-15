@@ -1,0 +1,465 @@
+/* ==========================================================================
+   THE STORY LAB — Visual Identity & Design System
+   ONE BRAND, FOUR VISUAL IDENTITIES (同一個品牌，四種視覺風格)
+   Themes: scrapbook | refined | romantic | experimental
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. ARTISTIC SCRAPBOOK ｜ 藝術拼貼 (Default Theme)
+   Vibe: Indie zine, collage art, paper texture, washi tape, hand-drawn order
+   -------------------------------------------------------------------------- */
+[data-theme="scrapbook"],
+:root:not([data-theme]) {
+  /* 固定色票 */
+  --theme-bg: #F3EBDD;               /* Cream Paper */
+  --theme-primary: #8E2927;          /* Burgundy */
+  --theme-secondary: #587D91;        /* Vintage Blue */
+  --theme-accent: #69745C;           /* Forest Green */
+  --theme-text: #493A34;             /* Dark Brown */
+  
+  /* 輔助與介面色 */
+  --theme-surface: #FAF5EC;
+  --theme-surface-pure: #FFFFFF;
+  --theme-border: #D8CEBC;
+  --theme-border-strong: #8E2927;
+  --theme-text-muted: #6E5C54;
+  --theme-text-light: #9B8980;
+  --theme-highlight: #F9EFE0;
+  --theme-tag-bg: #EAE0D0;
+
+  /* 字型體系 */
+  --theme-font-heading: "Playfair Display", "Noto Serif TC", Georgia, serif;
+  --theme-font-script: "Pinyon Script", "Alex Brush", cursive;
+  --theme-font-body: "Noto Sans TC", -apple-system, sans-serif;
+  --theme-font-mono: "Courier New", monospace;
+
+  /* 氛圍陰影與風格半徑 */
+  --theme-radius: 3px;
+  --theme-shadow: 0 8px 24px rgba(73, 58, 52, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   02. REFINED ｜ 高級質感
+   Vibe: Architectural minimalism, quiet luxury, curated restraint, generous space
+   -------------------------------------------------------------------------- */
+[data-theme="refined"] {
+  /* 固定色票 */
+  --theme-bg: #F7F5EF;               /* Ivory */
+  --theme-primary: #292927;          /* Charcoal */
+  --theme-secondary: #655348;        /* Cocoa */
+  --theme-accent: #69745C;           /* Olive */
+  --theme-text: #292927;             /* Charcoal */
+
+  /* 輔助與介面色 */
+  --theme-surface: #FFFFFF;
+  --theme-surface-pure: #FFFFFF;
+  --theme-border: #E2DDD3;           /* Oatmeal tint */
+  --theme-border-strong: #655348;
+  --theme-text-muted: #605B54;
+  --theme-text-light: #948E85;
+  --theme-highlight: #EAE4D8;        /* Oatmeal */
+  --theme-tag-bg: #EAE4D8;
+
+  /* 字型體系 */
+  --theme-font-heading: "Cormorant Garamond", "Noto Serif TC", serif;
+  --theme-font-script: "Cormorant Garamond", serif; /* Refined 不使用花體草寫，回歸極簡襯線 */
+  --theme-font-body: "Noto Sans TC", -apple-system, sans-serif;
+  --theme-font-mono: "Courier New", monospace;
+
+  --theme-radius: 0px;
+  --theme-shadow: 0 4px 20px rgba(41, 41, 39, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   03. ROMANTIC ｜ 浪漫復古
+   Vibe: Soft vintage boudoir, floral poise, lace, ribbons, vintage frames
+   -------------------------------------------------------------------------- */
+[data-theme="romantic"] {
+  /* 固定色票 */
+  --theme-bg: #F5EEE8;               /* Cream */
+  --theme-primary: #914B50;          /* Berry Red */
+  --theme-secondary: #C6A1A1;        /* Dusty Rose */
+  --theme-accent: #D8C6A5;           /* Champagne */
+  --theme-text: #493B38;             /* Dark Brown */
+
+  /* 輔助與介面色 */
+  --theme-surface: #FFFFFF;
+  --theme-surface-pure: #FFFFFF;
+  --theme-border: #E4D3CE;
+  --theme-border-strong: #914B50;
+  --theme-text-muted: #7A6663;
+  --theme-text-light: #A89592;
+  --theme-highlight: #FAF2EE;
+  --theme-tag-bg: #EEDCD7;
+
+  /* 字型體系 */
+  --theme-font-heading: "Cormorant Garamond", "Noto Serif TC", serif;
+  --theme-font-script: "Pinyon Script", cursive;
+  --theme-font-body: "Noto Sans TC", -apple-system, sans-serif;
+  --theme-font-mono: "Courier New", monospace;
+
+  --theme-radius: 2px;
+  --theme-shadow: 0 10px 30px rgba(145, 75, 80, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   04. EXPERIMENTAL ｜ 實驗知性
+   Vibe: Laboratory monograph, technical grid, research index, high precision
+   -------------------------------------------------------------------------- */
+[data-theme="experimental"] {
+  /* 固定色票 */
+  --theme-bg: #F2F3F1;               /* Cold White */
+  --theme-primary: #25282B;          /* Charcoal */
+  --theme-secondary: #416E9B;        /* Electric Blue */
+  --theme-accent: #B6C66A;           /* Lime Accent */
+  --theme-text: #25282B;             /* Charcoal */
+
+  /* 輔助與介面色 */
+  --theme-surface: #FFFFFF;
+  --theme-surface-pure: #FFFFFF;
+  --theme-border: #D2D7D9;           /* Silver Gray tint */
+  --theme-border-strong: #25282B;
+  --theme-text-muted: #575D63;
+  --theme-text-light: #8A9299;
+  --theme-highlight: #E5E9E8;
+  --theme-tag-bg: #E3E7E1;
+
+  /* 字型體系 */
+  --theme-font-heading: "Noto Serif TC", "Playfair Display", serif;
+  --theme-font-script: "Courier New", monospace; /* Experimental 不使用草寫，以等寬字元取代 */
+  --theme-font-body: "Noto Sans TC", -apple-system, sans-serif;
+  --theme-font-mono: "SFMono-Regular", Consolas, "Courier New", monospace;
+
+  --theme-radius: 0px;
+  --theme-shadow: 0 4px 16px rgba(37, 40, 43, 0.06);
+}
+
+/* ==========================================================================
+   THEME-SPECIFIC DECORATIVE MOTIFS & COMPONENT STYLING
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Style details for [data-theme="scrapbook"]
+   -------------------------------------------------------------------------- */
+[data-theme="scrapbook"] {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+/* 紙膠帶裝飾（Washi Tape） */
+[data-theme="scrapbook"] .theme-tape {
+  display: inline-block;
+  background-color: rgba(88, 125, 145, 0.22);
+  color: var(--theme-primary);
+  font-family: var(--theme-font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.85rem;
+  transform: rotate(-1.5deg);
+  border-left: 2px dashed rgba(73, 58, 52, 0.3);
+  border-right: 2px dashed rgba(73, 58, 52, 0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* 郵戳章與打孔細節 */
+[data-theme="scrapbook"] .key-facts-box {
+  background-color: var(--theme-surface);
+  border: 1px dashed var(--theme-primary);
+  border-left: 5px solid var(--theme-primary);
+  box-shadow: 2px 3px 0px rgba(142, 41, 39, 0.15);
+  position: relative;
+}
+
+[data-theme="scrapbook"] .key-facts-box::after {
+  content: "ARCHIVE // SCRAPBOOK";
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--theme-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--theme-secondary);
+}
+
+[data-theme="scrapbook"] .curator-note {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  box-shadow: 3px 4px 0px rgba(88, 125, 145, 0.2);
+  position: relative;
+  transform: rotate(0.2deg);
+}
+
+[data-theme="scrapbook"] .curator-note::before {
+  content: "✦ CURATOR'S JOURNAL · 探索者手札";
+  color: var(--theme-primary);
+}
+
+[data-theme="scrapbook"] .category-badge,
+[data-theme="scrapbook"] .stamp-badge {
+  background-color: var(--theme-surface);
+  color: var(--theme-primary);
+  border: 1px dashed var(--theme-primary);
+}
+
+[data-theme="scrapbook"] .read-progress-bar {
+  background: linear-gradient(90deg, var(--theme-secondary), var(--theme-primary));
+}
+
+/* --------------------------------------------------------------------------
+   Style details for [data-theme="refined"]
+   -------------------------------------------------------------------------- */
+[data-theme="refined"] {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+[data-theme="refined"] .key-facts-box {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-left: 2px solid var(--theme-primary);
+  outline: none;
+  box-shadow: none;
+  padding: 2.25rem 2.5rem;
+}
+
+[data-theme="refined"] .key-facts-box .box-title {
+  font-family: var(--theme-font-heading);
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--theme-primary);
+}
+
+[data-theme="refined"] .curator-note {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  outline: none;
+  box-shadow: none;
+}
+
+[data-theme="refined"] .curator-note::before {
+  content: "NOTE DE SYNTHÈSE · 編輯觀點";
+  font-family: var(--theme-font-heading);
+  color: var(--theme-secondary);
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+[data-theme="refined"] .category-badge,
+[data-theme="refined"] .stamp-badge {
+  background-color: transparent;
+  color: var(--theme-primary);
+  border: 1px solid var(--theme-primary);
+  border-radius: 0;
+  letter-spacing: 0.2em;
+}
+
+[data-theme="refined"] .featured-figure,
+[data-theme="refined"] .article-figure {
+  border: 1px solid var(--theme-border);
+  padding: 0;
+  box-shadow: none;
+}
+
+[data-theme="refined"] .featured-figure img,
+[data-theme="refined"] .article-figure img {
+  border: none;
+  border-radius: 0;
+}
+
+[data-theme="refined"] .read-progress-bar {
+  background-color: var(--theme-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Style details for [data-theme="romantic"]
+   -------------------------------------------------------------------------- */
+[data-theme="romantic"] {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+[data-theme="romantic"] .key-facts-box {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-secondary);
+  outline: 1px solid rgba(216, 198, 165, 0.4);
+  outline-offset: -5px;
+  border-left: 4px solid var(--theme-primary);
+  box-shadow: 0 8px 24px rgba(145, 75, 80, 0.06);
+}
+
+[data-theme="romantic"] .key-facts-box .box-title {
+  color: var(--theme-primary);
+  letter-spacing: 0.15em;
+}
+
+[data-theme="romantic"] .curator-note {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-secondary);
+  outline: 1px solid rgba(216, 198, 165, 0.4);
+  outline-offset: -5px;
+  box-shadow: 0 8px 24px rgba(145, 75, 80, 0.06);
+}
+
+[data-theme="romantic"] .curator-note::before {
+  content: "CURATOR'S NOTE · 浪漫手記";
+  color: var(--theme-primary);
+}
+
+[data-theme="romantic"] .category-badge,
+[data-theme="romantic"] .stamp-badge {
+  background-color: rgba(198, 161, 161, 0.15);
+  color: var(--theme-primary);
+  border: 1px dashed var(--theme-secondary);
+}
+
+[data-theme="romantic"] .featured-figure,
+[data-theme="romantic"] .article-figure {
+  border: 1px solid var(--theme-secondary);
+  padding: 6px;
+  background-color: var(--theme-surface);
+  box-shadow: 0 10px 28px rgba(145, 75, 80, 0.08);
+}
+
+[data-theme="romantic"] .read-progress-bar {
+  background: linear-gradient(90deg, var(--theme-secondary), var(--theme-primary));
+}
+
+/* --------------------------------------------------------------------------
+   Style details for [data-theme="experimental"]
+   -------------------------------------------------------------------------- */
+[data-theme="experimental"] {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  background-image: 
+    linear-gradient(rgba(191, 196, 197, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(191, 196, 197, 0.2) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+[data-theme="experimental"] .key-facts-box {
+  background-color: var(--theme-surface);
+  border: 2px solid var(--theme-primary);
+  outline: none;
+  box-shadow: 4px 4px 0px var(--theme-secondary);
+  position: relative;
+}
+
+[data-theme="experimental"] .key-facts-box .box-title {
+  color: var(--theme-primary);
+  font-family: var(--theme-font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+[data-theme="experimental"] .key-facts-box .box-title::before {
+  content: "[DATA // SPECIFICATIONS]";
+  color: var(--theme-secondary);
+}
+
+[data-theme="experimental"] .curator-note {
+  background-color: var(--theme-surface);
+  border: 2px solid var(--theme-primary);
+  outline: none;
+  box-shadow: 4px 4px 0px var(--theme-accent);
+}
+
+[data-theme="experimental"] .curator-note::before {
+  content: "OBSERVATION LOG // 研究員觀察日誌";
+  font-family: var(--theme-font-mono);
+  color: var(--theme-secondary);
+  letter-spacing: 0.1em;
+}
+
+[data-theme="experimental"] .category-badge,
+[data-theme="experimental"] .stamp-badge {
+  background-color: var(--theme-primary);
+  color: var(--theme-accent);
+  border: 1px solid var(--theme-primary);
+  border-radius: 0;
+  font-family: var(--theme-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+[data-theme="experimental"] .featured-figure,
+[data-theme="experimental"] .article-figure {
+  border: 1px solid var(--theme-border);
+  padding: 4px;
+  background-color: var(--theme-surface);
+  box-shadow: none;
+  position: relative;
+}
+
+[data-theme="experimental"] .featured-figure::before,
+[data-theme="experimental"] .article-figure::before {
+  content: "+ SPEC-IMG";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: var(--theme-primary);
+  color: var(--theme-accent);
+  font-family: var(--theme-font-mono);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  z-index: 2;
+}
+
+[data-theme="experimental"] .read-progress-bar {
+  background: linear-gradient(90deg, var(--theme-secondary), var(--theme-accent));
+}
+
+/* --------------------------------------------------------------------------
+   THEME SWITCHER WIDGET / PREVIEW HELPER STYLES
+   -------------------------------------------------------------------------- */
+.theme-selector-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  margin: 1.5rem auto;
+  max-width: 620px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.theme-pill-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 0.4rem 1rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #555;
+}
+
+.theme-pill-btn .color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.theme-pill-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-pill-btn.active {
+  background-color: #292927;
+  color: #FFFFFF;
+}
+
+.theme-pill-btn[data-target-theme="scrapbook"] .color-dot { background-color: #8E2927; }
+.theme-pill-btn[data-target-theme="refined"] .color-dot { background-color: #69745C; }
+.theme-pill-btn[data-target-theme="romantic"] .color-dot { background-color: #914B50; }
+.theme-pill-btn[data-target-theme="experimental"] .color-dot { background-color: #416E9B; }

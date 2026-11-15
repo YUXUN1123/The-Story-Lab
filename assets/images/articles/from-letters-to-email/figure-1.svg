@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="commSpectrumBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7"/>
+      <stop offset="100%" stop-color="#F2EBE1"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-6%" y="-6%" width="112%" height="114%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#55443B" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- 背景底板 -->
+  <rect width="1120" height="540" rx="16" fill="url(#commSpectrumBg)" stroke="#D8C8B5" stroke-width="1.5"/>
+
+  <!-- 標題區域 -->
+  <g transform="translate(50, 42)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', serif" font-size="14" letter-spacing="3" fill="#6A5347" font-weight="600">HISTORICAL MEDIA EVOLUTION · PSYCHOLOGICAL LATENCY</text>
+    <text x="0" y="28" font-family="'Noto Serif TC', serif" font-size="20" fill="#2E241E" font-weight="700">人類遠距通訊光譜：傳輸延遲與心靈沉澱的消長</text>
+  </g>
+
+  <!-- 頂部時間軸線 -->
+  <line x1="50" y1="110" x2="1070" y2="110" stroke="#C4B4A2" stroke-width="2.5"/>
+
+  <!-- 5 大歷史節點卡片橫向排列 (每張寬 195px，間距 20px) -->
+
+  <!-- CARD 1: 古代驛站郵騎 -->
+  <g transform="translate(35, 100)">
+    <!-- 軸上節點圓點 -->
+    <circle cx="97" cy="10" r="8" fill="#8F5E4E" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="97" y="-6" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="700" fill="#8F5E4E" text-anchor="middle">BC 500 - 1830s</text>
+
+    <!-- 卡片本體 -->
+    <rect x="0" y="25" width="195" height="325" rx="8" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="97" y="54" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E" text-anchor="middle">驛站與信鴿</text>
+    <line x1="25" y1="66" x2="170" y2="66" stroke="#EDE5DA" stroke-width="1"/>
+
+    <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#66564E" transform="translate(18, 86)">
+      <text x="0" y="0">⏳ 延遲：數日～數月</text>
+      <text x="0" y="24">📜 載體：羊皮紙／竹簡</text>
+      <text x="0" y="48">🏛️ 階層：帝王政令與軍事</text>
+      
+      <rect x="-4" y="66" width="167" height="110" rx="4" fill="#FAF6F0"/>
+      <text x="6" y="86" fill="#3D3029" font-weight="700">通訊特點：</text>
+      <text x="6" y="106" fill="#5A473E">
+        <tspan x="6" dy="0">平民階層難以企及，</tspan>
+        <tspan x="6" dy="18">紙短情長、字字千金，</tspan>
+        <tspan x="6" dy="18">飽含極具重量的等待。</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 2: 黑便士大眾郵政 -->
+  <g transform="translate(250, 100)">
+    <circle cx="97" cy="10" r="8" fill="#A86E56" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="97" y="-6" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="700" fill="#A86E56" text-anchor="middle">1840</text>
+
+    <rect x="0" y="25" width="195" height="325" rx="8" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="97" y="54" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E" text-anchor="middle">黑便士郵政</text>
+    <line x1="25" y1="66" x2="170" y2="66" stroke="#EDE5DA" stroke-width="1"/>
+
+    <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#66564E" transform="translate(18, 86)">
+      <text x="0" y="0">⏳ 延遲：1 至 3 天</text>
+      <text x="0" y="24">📮 載體：預付郵票信件</text>
+      <text x="0" y="48">👥 階層：普及全體大眾</text>
+
+      <rect x="-4" y="66" width="167" height="110" rx="4" fill="#FAF6F0"/>
+      <text x="6" y="86" fill="#3D3029" font-weight="700">通訊特點：</text>
+      <text x="6" y="106" fill="#5A473E">
+        <tspan x="6" dy="0">確立非同步對話，</tspan>
+        <tspan x="6" dy="18">書信文學黃金時代，</tspan>
+        <tspan x="6" dy="18">修辭與內省空間最廣。</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 3: 摩斯有線電報 -->
+  <g transform="translate(465, 100)">
+    <circle cx="97" cy="10" r="8" fill="#5F7B70" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="97" y="-6" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="700" fill="#5F7B70" text-anchor="middle">1844</text>
+
+    <rect x="0" y="25" width="195" height="325" rx="8" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="97" y="54" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E" text-anchor="middle">摩斯電報</text>
+    <line x1="25" y1="66" x2="170" y2="66" stroke="#EDE5DA" stroke-width="1"/>
+
+    <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#66564E" transform="translate(18, 86)">
+      <text x="0" y="0">⏳ 延遲：數小時之內</text>
+      <text x="0" y="24">⚡ 載體：電脈衝編碼訊號</text>
+      <text x="0" y="48">📰 階層：商務、軍事與新聞</text>
+
+      <rect x="-4" y="66" width="167" height="110" rx="4" fill="#FAF6F0"/>
+      <text x="6" y="86" fill="#3D3029" font-weight="700">通訊特點：</text>
+      <text x="6" y="106" fill="#5A473E">
+        <tspan x="6" dy="0">按字計費促使句式精簡，</tspan>
+        <tspan x="6" dy="18">人類資訊首次徹底脫離</tspan>
+        <tspan x="6" dy="18">肉身與物理交通限制。</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 4: ARPANET 電子郵件 -->
+  <g transform="translate(680, 100)">
+    <circle cx="97" cy="10" r="8" fill="#3F747F" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="97" y="-6" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="700" fill="#3F747F" text-anchor="middle">1971</text>
+
+    <rect x="0" y="25" width="195" height="325" rx="8" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="97" y="54" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E" text-anchor="middle">網路 Email (@)</text>
+    <line x1="25" y1="66" x2="170" y2="66" stroke="#EDE5DA" stroke-width="1"/>
+
+    <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#66564E" transform="translate(18, 86)">
+      <text x="0" y="0">⏳ 延遲：數秒至數分鐘</text>
+      <text x="0" y="24">💻 載體：網路封包協議</text>
+      <text x="0" y="48">🌐 階層：全球科研與現代工作</text>
+
+      <rect x="-4" y="66" width="167" height="110" rx="4" fill="#FAF6F0"/>
+      <text x="6" y="86" fill="#3D3029" font-weight="700">通訊特點：</text>
+      <text x="6" y="106" fill="#5A473E">
+        <tspan x="6" dy="0">繼承了傳統書信的禮儀，</tspan>
+        <tspan x="6" dy="18">卻擁有光纖網絡的速度，</tspan>
+        <tspan x="6" dy="18">成為全球數位協作基石。</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 5: 即時通訊與通知 -->
+  <g transform="translate(895, 100)">
+    <circle cx="97" cy="10" r="8" fill="#224C60" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="97" y="-6" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="700" fill="#224C60" text-anchor="middle">NOW</text>
+
+    <rect x="0" y="25" width="195" height="325" rx="8" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#cardShadow)"/>
+    <text x="97" y="54" font-family="'Noto Serif TC', serif" font-size="15" font-weight="600" fill="#2E241E" text-anchor="middle">即時通訊 (IM)</text>
+    <line x1="25" y1="66" x2="170" y2="66" stroke="#EDE5DA" stroke-width="1"/>
+
+    <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#66564E" transform="translate(18, 86)">
+      <text x="0" y="0">⏳ 延遲：&lt; 50 毫秒</text>
+      <text x="0" y="24">📱 載體：即時推播／貼圖</text>
+      <text x="0" y="48">🌍 階層：全球人人全天候</text>
+
+      <rect x="-4" y="66" width="167" height="110" rx="4" fill="#FAF6F0"/>
+      <text x="6" y="86" fill="#3D3029" font-weight="700">通訊特點：</text>
+      <text x="6" y="106" fill="#5A473E">
+        <tspan x="6" dy="0">物理延遲被徹底抹平，</tspan>
+        <tspan x="6" dy="18">語言趨向碎片化與符號，</tspan>
+        <tspan x="6" dy="18">伴隨「已讀」連線焦慮。</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- 底部思考導引長橫框 (寬 1055px，居中放置) -->
+  <g transform="translate(35, 470)">
+    <rect width="1055" height="42" rx="6" fill="#F4EFE6" stroke="#E0D5C7" stroke-width="1"/>
+    <text x="25" y="26" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan font-weight="700" fill="#8F5E4E">💡 傳播學思考：</tspan>
+      <tspan>當物理「時間延遲」被現代科技完全抹平時，我們獲得了極限的效率，卻也悄然遺落了深思熟慮的心靈沉澱空間。</tspan>
+    </text>
+  </g>
+</svg>

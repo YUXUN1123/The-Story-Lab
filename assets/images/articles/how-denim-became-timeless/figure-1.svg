@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 530" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="blueprintBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F4EFE6"/>
+    </linearGradient>
+
+    <radialGradient id="brassFigRivet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F5D78E"/>
+      <stop offset="50%" stop-color="#CA9235"/>
+      <stop offset="100%" stop-color="#7B4E15"/>
+    </radialGradient>
+
+    <filter id="softCardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#55443B" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- 背景底板 -->
+  <rect width="1020" height="530" rx="16" fill="url(#blueprintBg)" stroke="#D8C8B5" stroke-width="1.5"/>
+
+  <!-- 圖表標題 -->
+  <g transform="translate(50, 42)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', serif" font-size="14" letter-spacing="3" fill="#845D25" font-weight="600">TECHNICAL PATENT BLUEPRINT · US NO. 139,121</text>
+    <text x="0" y="28" font-family="'Noto Serif TC', serif" font-size="20" fill="#2E241E" font-weight="700">1873 年金屬鉚釘加固與五口袋工藝解構</text>
+  </g>
+
+  <!-- 左側卡片：鉚釘穿透加固剖面圖 (Cross-Section) -->
+  <g transform="translate(50, 105)">
+    <rect width="440" height="385" rx="12" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#softCardShadow)"/>
+    
+    <!-- 卡片標題 -->
+    <text x="25" y="32" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#845D25" letter-spacing="1">FIGURE A · CROSS-SECTION</text>
+    <text x="25" y="55" font-family="'Noto Serif TC', serif" font-size="16" font-weight="600" fill="#2E241E">雙面金屬夾扣抗剪力結構</text>
+
+    <!-- 剖面示意圖繪製區（全新非重疊佈局：中心為 x=215, y=175） -->
+    <g transform="translate(215, 175)">
+      <!-- 1. 兩層丹寧布料橫截面 (Fabric Layers) -->
+      <!-- 上層丹寧布片：口袋角落 -->
+      <rect x="-65" y="-18" width="165" height="13" fill="#314E68" rx="2"/>
+      <!-- 下層厚重丹寧布片：褲身基底 -->
+      <rect x="-65" y="5" width="165" height="15" fill="#203448" rx="2"/>
+
+      <!-- 2. 銅鉚釘組件 (Copper Rivet Assembly at x=0) -->
+      <!-- 穿孔實心銅柱 (Solid Shank) -->
+      <rect x="-7" y="-34" width="14" height="70" fill="#9C6B28" rx="1"/>
+      <!-- 上端弧形圓帽 (Top Rivet Cap) -->
+      <path d="M -28 -24 Q 0 -44 28 -24 Z" fill="url(#brassFigRivet)" stroke="#5E3E13" stroke-width="1.5"/>
+      <!-- 下端加固平墊圈 (Burr / Washer) -->
+      <path d="M -25 24 Q 0 35 25 24 Z" fill="url(#brassFigRivet)" stroke="#5E3E13" stroke-width="1.5"/>
+
+      <!-- 3. 左側標籤群（布料標籤與鉚釘標籤分層獨立，完全避開彼此） -->
+      <!-- 上端圓帽引線與標籤 (Top Cap Callout) -->
+      <polyline points="0,-36 -35,-58 -70,-58" fill="none" stroke="#845D25" stroke-width="1.2"/>
+      <circle cx="0" cy="-36" r="2.5" fill="#845D25"/>
+      <text x="-75" y="-62" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#845D25">黃銅外凸圓帽</text>
+      <text x="-75" y="-49" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#845D25">Upper Rivet Cap</text>
+
+      <!-- 口袋布料層引線與標籤 (Upper Fabric Callout) -->
+      <line x1="-65" y1="-12" x2="-80" y2="-12" stroke="#314E68" stroke-width="1.2"/>
+      <circle cx="-65" cy="-12" r="2" fill="#314E68"/>
+      <text x="-85" y="-15" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#314E68">口袋布料層</text>
+      <text x="-85" y="-2" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#587792">Pocket Corner</text>
+
+      <!-- 褲身布料層引線與標籤 (Lower Fabric Callout) -->
+      <line x1="-65" y1="12" x2="-80" y2="12" stroke="#203448" stroke-width="1.2"/>
+      <circle cx="-65" cy="12" r="2" fill="#203448"/>
+      <text x="-85" y="16" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#203448">褲身基底布料</text>
+      <text x="-85" y="29" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#587792">Pant Body Denim</text>
+
+      <!-- 下端平墊圈引線與標籤 (Bottom Burr Callout) -->
+      <polyline points="0,32 -35,58 -70,58" fill="none" stroke="#845D25" stroke-width="1.2"/>
+      <circle cx="0" cy="32" r="2.5" fill="#845D25"/>
+      <text x="-75" y="55" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#845D25">加固平墊圈</text>
+      <text x="-75" y="68" text-anchor="end" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#845D25">Lower Burr / Washer</text>
+
+      <!-- 4. 右側受力分析標籤群 (Right Side Stress & Clamp Analysis) -->
+      <!-- 未加固前撕裂點標記 (Tension point at fabric edge x=85) -->
+      <line x1="85" y1="-18" x2="85" y2="-45" stroke="#C44D4D" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <circle cx="85" cy="-18" r="3.5" fill="#C44D4D"/>
+      <polygon points="85,-20 81,-28 89,-28" fill="#C44D4D"/>
+      <text x="96" y="-48" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#C44D4D">未加固前撕裂點</text>
+      <text x="96" y="-35" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#C44D4D">Tension Tear Point</text>
+
+      <!-- 鉚釘鎖定抗剪力說明 (Anti-shear clamped joint) -->
+      <line x1="85" y1="12" x2="85" y2="42" stroke="#2E7D32" stroke-width="1.5"/>
+      <circle cx="85" cy="12" r="3" fill="#2E7D32"/>
+      <text x="96" y="40" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="700" fill="#2E7D32">✓ 雙面咬合鎖定</text>
+      <text x="96" y="53" font-family="'Noto Sans TC', sans-serif" font-size="9.5" fill="#2E7D32">Anti-Shear Joint</text>
+    </g>
+
+    <!-- 底部說明文字盒（嚴格限制在卡片邊界 400px 內，行距寬鬆） -->
+    <rect x="20" y="295" width="400" height="72" rx="6" fill="#FAF7F2"/>
+    <text x="32" y="320" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#5A473E">
+      <tspan x="32" dy="0">淘金工人常因口袋裝滿礦石而爆裂。Jacob Davis 以銅鉚釘</tspan>
+      <tspan x="32" dy="20">將兩層布料緊密夾扣咬合，將點狀剪切應力分散至金屬墊圈，</tspan>
+      <tspan x="32" dy="20">徹底解決了重力作業下的布料撕裂問題。</tspan>
+    </text>
+  </g>
+
+  <!-- 右側卡片：經典五口袋工裝機能解析 -->
+  <g transform="translate(510, 105)">
+    <rect width="460" height="385" rx="12" fill="#FFFFFF" stroke="#E6DDD2" stroke-width="1" filter="url(#softCardShadow)"/>
+    
+    <!-- 卡片標題 -->
+    <text x="25" y="32" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="700" fill="#845D25" letter-spacing="1">FIGURE B · FUNCTIONAL DETAILS</text>
+    <text x="25" y="55" font-family="'Noto Serif TC', serif" font-size="16" font-weight="600" fill="#2E241E">百年實用工裝的細節意圖</text>
+
+    <!-- 細節列表 -->
+    <g transform="translate(25, 75)" font-family="'Noto Sans TC', sans-serif">
+      <!-- 項目 1: 錶袋 -->
+      <circle cx="10" cy="18" r="5" fill="#D49E43"/>
+      <text x="24" y="22" font-size="12.5" font-weight="700" fill="#2E241E">第五個口袋（錶袋 Watch Pocket）</text>
+      <text x="24" y="42" font-size="11.5" fill="#66564E">
+        <tspan x="24" dy="0">非裝硬幣用途，最初專為 19 世紀鐵路工人與礦工</tspan>
+        <tspan x="24" dy="18">保護昂貴機械懷錶設計，緊貼大腿避免晃動磕碰。</tspan>
+      </text>
+
+      <!-- 項目 2: 橘黃縫線 -->
+      <circle cx="10" cy="88" r="5" fill="#D49E43"/>
+      <text x="24" y="92" font-size="12.5" font-weight="700" fill="#2E241E">橘黃色粗棉縫線（Orange Contrast Stitch）</text>
+      <text x="24" y="112" font-size="11.5" fill="#66564E">
+        <tspan x="24" dy="0">選用與黃銅鉚釘同色調的醒目粗線，既呼應金屬質感，</tspan>
+        <tspan x="24" dy="18">又象徵高規格的工業車縫強度與堅韌品質。</tspan>
+      </text>
+
+      <!-- 項目 3: 落色美學 -->
+      <circle cx="10" cy="158" r="5" fill="#D49E43"/>
+      <text x="24" y="162" font-size="12.5" font-weight="700" fill="#2E241E">經緯交織落色（Fading &amp; Aging）</text>
+      <text x="24" y="182" font-size="11.5" fill="#66564E">
+        <tspan x="24" dy="0">植物靛藍染料僅覆蓋經紗表層。隨穿著者日常活動摩擦，</tspan>
+        <tspan x="24" dy="18">白色棉芯逐漸顯露，演變為專屬穿著者的生命印記。</tspan>
+      </text>
+    </g>
+
+    <!-- 底部小結框 -->
+    <rect x="25" y="315" width="410" height="50" rx="6" fill="#F8F3EC"/>
+    <text x="38" y="336" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#6B5950">
+      <tspan x="38" dy="0">💡 從礦坑到好萊塢、搖滾樂到高訂伸展台，</tspan>
+      <tspan x="38" dy="18">工裝機能最終昇華為跨越世紀的全球文化共同符號。</tspan>
+    </text>
+  </g>
+</svg>

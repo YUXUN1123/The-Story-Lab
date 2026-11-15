@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="curveTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#587D91" stop-opacity="0.85" />
+      <stop offset="30%" stop-color="#587D91" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#587D91" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="curveHeart" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B9878C" stop-opacity="0.2" />
+      <stop offset="30%" stop-color="#B9878C" stop-opacity="0.75" />
+      <stop offset="70%" stop-color="#B9878C" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#B9878C" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="curveBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8E2927" stop-opacity="0.15" />
+      <stop offset="25%" stop-color="#8E2927" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#8E2927" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8E2927" stop-opacity="0.25" />
+    </linearGradient>
+
+    <filter id="perfumeShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#493A34" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- 背景卡片 -->
+  <rect width="960" height="500" rx="12" fill="#FAF5EC" stroke="#D8CEBC" stroke-width="1.5" />
+
+  <!-- 頂部標題與說明 -->
+  <g transform="translate(60, 42)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', serif" font-size="13" letter-spacing="3" fill="#8E2927" font-weight="700">VOLATILITY SPECTRUM · OLFACTORY DYNAMICS</text>
+    <text x="0" y="24" font-family="'Noto Serif TC', serif" font-size="19" fill="#2E241E" font-weight="700">香氛分子揮發濃度隨時間演進曲線</text>
+  </g>
+
+  <!-- 圖表網格線 (Graph Grid) -->
+  <g stroke="#E8DFD3" stroke-width="1">
+    <line x1="100" y1="120" x2="880" y2="120" stroke-dasharray="4,4"/>
+    <line x1="100" y1="190" x2="880" y2="190" stroke-dasharray="4,4"/>
+    <line x1="100" y1="260" x2="880" y2="260" stroke-dasharray="4,4"/>
+    <line x1="100" y1="330" x2="880" y2="330" stroke-dasharray="4,4"/>
+    <!-- 座標主軸 -->
+    <line x1="100" y1="400" x2="880" y2="400" stroke="#493A34" stroke-width="1.8" />
+    <line x1="100" y1="100" x2="100" y2="400" stroke="#493A34" stroke-width="1.8" />
+  </g>
+
+  <!-- 軸標籤 (Axis Labels) -->
+  <text x="100" y="92" font-family="'Noto Serif TC', serif" font-weight="700" font-size="12" fill="#493A34">空中氣味分子濃度 ↑</text>
+  <text x="880" y="392" font-family="'Noto Serif TC', serif" font-weight="700" font-size="12" fill="#845D25" text-anchor="end">時間流逝 (Time) →</text>
+
+  <!-- X 軸時間刻度（獨立一行，與軸標籤完全分離不衝突） -->
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#7E6B6E" text-anchor="middle">
+    <text x="110" y="420">0分 (瞬間)</text>
+    <text x="260" y="420">15分鐘</text>
+    <text x="440" y="420">1小時</text>
+    <text x="640" y="420">4小時</text>
+    <text x="820" y="420">8–24小時</text>
+  </g>
+
+  <!-- 曲線填色與線條 -->
+  <!-- 1. 後調 (Base Curve) -->
+  <path d="M 100 380 Q 240 370 440 280 T 660 170 Q 770 220 880 340 L 880 400 L 100 400 Z" fill="url(#curveBase)" />
+  <path d="M 100 380 Q 240 370 440 280 T 660 170 Q 770 220 880 340" fill="none" stroke="#8E2927" stroke-width="3" />
+
+  <!-- 2. 中調 (Heart Curve) -->
+  <path d="M 100 340 Q 220 220 380 140 T 580 210 Q 720 320 880 395 L 880 400 L 100 400 Z" fill="url(#curveHeart)" />
+  <path d="M 100 340 Q 220 220 380 140 T 580 210 Q 720 320 880 395" fill="none" stroke="#B9878C" stroke-width="3" stroke-dasharray="8,4" />
+
+  <!-- 3. 前調 (Top Curve) -->
+  <path d="M 100 110 Q 180 130 260 260 T 480 380 Q 580 398 880 400 L 880 400 L 100 400 Z" fill="url(#curveTop)" />
+  <path d="M 100 110 Q 180 130 260 260 T 480 380 Q 580 398 880 400" fill="none" stroke="#587D91" stroke-width="3" />
+
+  <!-- 曲線專屬標籤卡（加寬至 205-215px，文字完全置於框內） -->
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11.5" font-weight="700">
+    <!-- 前調標籤 -->
+    <g transform="translate(145, 105)" filter="url(#perfumeShadow)">
+      <rect width="205" height="28" rx="4" fill="#FFFFFF" stroke="#587D91" stroke-width="1.2"/>
+      <circle cx="14" cy="14" r="4.5" fill="#587D91"/>
+      <text x="26" y="18" fill="#3D5E70">前調：極高蒸氣壓 · 快速逸散</text>
+    </g>
+
+    <!-- 中調標籤 -->
+    <g transform="translate(385, 135)" filter="url(#perfumeShadow)">
+      <rect width="205" height="28" rx="4" fill="#FFFFFF" stroke="#B9878C" stroke-width="1.2"/>
+      <circle cx="14" cy="14" r="4.5" fill="#B9878C"/>
+      <text x="26" y="18" fill="#8F585E">中調：中分子量 · 核心旋律</text>
+    </g>
+
+    <!-- 後調標籤 -->
+    <g transform="translate(635, 185)" filter="url(#perfumeShadow)">
+      <rect width="215" height="28" rx="4" fill="#FFFFFF" stroke="#8E2927" stroke-width="1.2"/>
+      <circle cx="14" cy="14" r="4.5" fill="#8E2927"/>
+      <text x="26" y="18" fill="#8E2927">後調：重分子定香 · 溫暖餘韻</text>
+    </g>
+  </g>
+
+  <!-- t=0 同時存在提示卡片（左下方整潔卡片，不與曲線干擾） -->
+  <g transform="translate(100, 442)">
+    <rect width="420" height="34" rx="4" fill="#FFFFFF" stroke="#D8CEBC" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#587D91" />
+    <circle cx="30" cy="17" r="4" fill="#B9878C" />
+    <circle cx="42" cy="17" r="4" fill="#8E2927" />
+    <text x="56" y="21" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#493A34">
+      <tspan font-weight="700">t = 0 秒關鍵：</tspan>
+      <tspan fill="#66564E">三調分子在噴灑瞬間全部同時存在，僅揮發速率不同。</tspan>
+    </text>
+  </g>
+</svg>

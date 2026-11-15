@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF7F2" />
+      <stop offset="50%" stop-color="#F5EEE8" />
+      <stop offset="100%" stop-color="#EEDCD5" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.9)" />
+      <stop offset="30%" stop-color="rgba(245, 238, 232, 0.4)" />
+      <stop offset="70%" stop-color="rgba(255, 255, 255, 0.7)" />
+      <stop offset="100%" stop-color="rgba(230, 215, 208, 0.6)" />
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8E2927" stop-opacity="0.75" />
+      <stop offset="40%" stop-color="#B9878C" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#D8C6A5" stop-opacity="0.5" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#493A34" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas with Editorial Texture Pattern -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Architectural Grid & Geometry Lines -->
+  <g stroke="#D8CEBC" stroke-width="1" opacity="0.4" stroke-dasharray="4,8">
+    <line x1="120" y1="0" x2="120" y2="675" />
+    <line x1="1080" y1="0" x2="1080" y2="675" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <circle cx="600" cy="337" r="280" fill="none" />
+    <circle cx="600" cy="337" r="380" fill="none" />
+  </g>
+
+  <!-- Decorative Corner Brackets -->
+  <g stroke="#B9878C" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 140 100 L 100 100 L 100 140" />
+    <path d="M 1060 100 L 1100 100 L 1100 140" />
+    <path d="M 140 575 L 100 575 L 100 535" />
+    <path d="M 1060 575 L 1100 575 L 1100 535" />
+  </g>
+
+  <!-- Evaporation Wave Ripples (Representing Top, Heart, Base Diffusion Curves) -->
+  <g fill="none" opacity="0.55">
+    <!-- Top Notes: Swift, light, airy wave -->
+    <path d="M 320 220 C 440 160, 520 120, 600 110 C 680 100, 760 140, 880 200" stroke="#587D91" stroke-width="1.5" stroke-dasharray="6,6" />
+    <text x="895" y="195" font-family="'Courier New', monospace" font-size="12" fill="#587D91" letter-spacing="2">TOP // TÊTE (0–15m)</text>
+    
+    <!-- Heart Notes: Medium, rounded harmonic wave -->
+    <path d="M 280 290 C 420 220, 510 190, 600 185 C 690 180, 780 210, 920 280" stroke="#B9878C" stroke-width="2" />
+    <text x="935" y="280" font-family="'Courier New', monospace" font-size="12" fill="#B9878C" letter-spacing="2">HEART // CŒUR (30m–4h)</text>
+    
+    <!-- Base Notes: Deep, slow foundational wave -->
+    <path d="M 240 370 C 400 320, 500 295, 600 290 C 700 285, 800 310, 960 380" stroke="#8E2927" stroke-width="2.5" />
+    <text x="975" y="380" font-family="'Courier New', monospace" font-size="12" fill="#8E2927" letter-spacing="2">BASE // FOND (6h–24h+)</text>
+  </g>
+
+  <!-- Central Flacon (Classical Perfume Bottle Illustration) -->
+  <g filter="url(#subtleShadow)" transform="translate(600, 360)">
+    <!-- Liquid Level Inside Bottle -->
+    <rect x="-95" y="-50" width="190" height="180" rx="12" fill="url(#liquidGrad)" />
+    <path d="M -95 -20 Q -40 -35 0 -22 T 95 -25 L 95 130 Q 95 136 89 136 L -89 136 Q -95 136 -95 130 Z" fill="#8E2927" opacity="0.35" />
+
+    <!-- Glass Bottle Body -->
+    <rect x="-105" y="-60" width="210" height="200" rx="16" fill="url(#glassGrad)" stroke="#B9878C" stroke-width="2" />
+    <rect x="-93" y="-48" width="186" height="176" rx="10" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" />
+
+    <!-- Bottle Neck & Collar -->
+    <rect x="-35" y="-95" width="70" height="36" fill="#D8C6A5" stroke="#493A34" stroke-width="1.5" rx="3" />
+    <line x1="-35" y1="-80" x2="35" y2="-80" stroke="#493A34" stroke-width="1" />
+
+    <!-- Elegant Faceted Stopper -->
+    <polygon points="-48,-155 48,-155 38,-95 -38,-95" fill="url(#glassGrad)" stroke="#B9878C" stroke-width="2" />
+    <polygon points="-38,-148 38,-148 30,-102 -30,-102" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" />
+
+    <!-- Bottle Label (Scrapbook/Editorial Etiquette) -->
+    <rect x="-65" y="0" width="130" height="90" fill="#FFF9F5" stroke="#493A34" stroke-width="1" rx="2" />
+    <rect x="-60" y="5" width="120" height="80" fill="none" stroke="#D8CEBC" stroke-width="0.8" stroke-dasharray="2,2" />
+    
+    <text x="0" y="28" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#8E2927" text-anchor="middle" letter-spacing="3">THE STORY LAB</text>
+    <text x="0" y="44" font-family="'Courier New', monospace" font-size="7.5" fill="#587D91" text-anchor="middle" letter-spacing="2">N° 01 · VOLATILITÉ</text>
+    <line x1="-30" y1="52" x2="30" y2="52" stroke="#B9878C" stroke-width="0.8" />
+    <text x="0" y="68" font-family="Georgia, serif" font-style="italic" font-size="8.5" fill="#493A34" text-anchor="middle">Pyramide Olfactive</text>
+  </g>
+
+  <!-- Editorial Masthead Badges & Typography -->
+  <g font-family="'Courier New', monospace" fill="#493A34">
+    <text x="140" y="90" font-size="11" letter-spacing="3" fill="#8E2927">EVERYDAY MYSTERIES // ESSAI 01</text>
+    <text x="140" y="615" font-size="11" letter-spacing="2" fill="#6E5C54">MOLECULAR WEIGHT · VAPOR PRESSURE · TEMPORAL EVOLUTION</text>
+    <text x="1060" y="615" font-size="11" letter-spacing="2" fill="#6E5C54" text-anchor="end">AUTUMN 2026 EDITION</text>
+  </g>
+</svg>

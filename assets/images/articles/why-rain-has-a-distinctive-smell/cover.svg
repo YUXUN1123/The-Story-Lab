@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- 背景漸層：雨天大地與清涼空氣 -->
+    <linearGradient id="rainBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3A3A"/>
+      <stop offset="45%" stop-color="#3F4F4F"/>
+      <stop offset="75%" stop-color="#5A6860"/>
+      <stop offset="100%" stop-color="#8A7968"/>
+    </linearGradient>
+
+    <!-- 土壤顆粒漸層 -->
+    <linearGradient id="soilLayer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3E2F28"/>
+      <stop offset="50%" stop-color="#4A3B32"/>
+      <stop offset="100%" stop-color="#342822"/>
+    </linearGradient>
+
+    <!-- 氣膠光暈 -->
+    <radialGradient id="aerosolGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5DFD8" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#8FB8AC" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5A6860" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 水滴光澤 -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F4F1" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#9BC0B7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4F746B" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景底色 -->
+  <rect width="1200" height="675" fill="url(#rainBg)"/>
+
+  <!-- 氛圍質感微細雨絲 (斜角線條) -->
+  <g stroke="#C0D6D0" stroke-opacity="0.18" stroke-width="1.2" stroke-linecap="round">
+    <line x1="120" y1="40" x2="80" y2="220" />
+    <line x1="260" y1="20" x2="210" y2="280" />
+    <line x1="420" y1="60" x2="380" y2="240" />
+    <line x1="600" y1="30" x2="550" y2="260" />
+    <line x1="780" y1="50" x2="730" y2="270" />
+    <line x1="940" y1="20" x2="890" y2="250" />
+    <line x1="1080" y1="60" x2="1030" y2="290" />
+    <line x1="180" y1="180" x2="140" y2="360" />
+    <line x1="340" y1="200" x2="290" y2="420" />
+    <line x1="860" y1="190" x2="820" y2="380" />
+    <line x1="1020" y1="170" x2="980" y2="390" />
+  </g>
+
+  <!-- 土壤基底與多孔顆粒層 -->
+  <rect x="0" y="520" width="1200" height="155" fill="url(#soilLayer)" />
+  <path d="M0 520 Q150 512 300 522 T600 516 T900 524 T1200 518 L1200 675 L0 675 Z" fill="#42332A" />
+
+  <!-- 土壤孔隙與顆粒點描 -->
+  <g fill="#241B16" opacity="0.45">
+    <circle cx="180" cy="560" r="14" />
+    <circle cx="280" cy="590" r="22" />
+    <circle cx="420" cy="550" r="16" />
+    <circle cx="560" cy="580" r="18" />
+    <circle cx="700" cy="555" r="12" />
+    <circle cx="840" cy="595" r="24" />
+    <circle cx="980" cy="565" r="15" />
+    <circle cx="1100" cy="610" r="20" />
+  </g>
+
+  <!-- 中心主要撞擊水滴與噴濺冠狀圖案 (Crown Splash & Aerosol) -->
+  <g transform="translate(600, 516)">
+    <!-- 冠狀飛濺圈 -->
+    <path d="M -90 0 C -70 -25, -50 -35, -30 -15 C -20 -35, -5 -40, 0 -20 C 5 -40, 20 -35, 30 -15 C 50 -35, 70 -25, 90 0 Z" fill="url(#dropGrad)" opacity="0.85"/>
+    <!-- 衝擊波環 -->
+    <ellipse cx="0" cy="0" rx="140" ry="24" fill="none" stroke="#A7C7BE" stroke-width="2.5" opacity="0.5"/>
+    <ellipse cx="0" cy="0" rx="210" ry="36" fill="none" stroke="#A7C7BE" stroke-width="1.5" opacity="0.3"/>
+    <ellipse cx="0" cy="0" rx="290" ry="50" fill="none" stroke="#A7C7BE" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- 升騰的氣膠微粒雲（Geosmin & Plant Oils Aerosols） -->
+  <g>
+    <!-- 大光暈微粒群 -->
+    <circle cx="600" cy="420" r="16" fill="url(#aerosolGlow)" />
+    <circle cx="570" cy="380" r="10" fill="url(#aerosolGlow)" />
+    <circle cx="635" cy="365" r="12" fill="url(#aerosolGlow)" />
+    <circle cx="530" cy="320" r="18" fill="url(#aerosolGlow)" />
+    <circle cx="660" cy="300" r="15" fill="url(#aerosolGlow)" />
+    <circle cx="590" cy="260" r="22" fill="url(#aerosolGlow)" />
+    <circle cx="480" cy="240" r="14" fill="url(#aerosolGlow)" />
+    <circle cx="710" cy="220" r="17" fill="url(#aerosolGlow)" />
+    <circle cx="560" cy="180" r="25" fill="url(#aerosolGlow)" />
+    <circle cx="640" cy="150" r="20" fill="url(#aerosolGlow)" />
+
+    <!-- 高亮核心點 -->
+    <g fill="#EAF6F3" opacity="0.8">
+      <circle cx="600" cy="420" r="3.5" />
+      <circle cx="570" cy="380" r="2.5" />
+      <circle cx="635" cy="365" r="3" />
+      <circle cx="530" cy="320" r="4" />
+      <circle cx="660" cy="300" r="3" />
+      <circle cx="590" cy="260" r="4.5" />
+      <circle cx="480" cy="240" r="3" />
+      <circle cx="710" cy="220" r="3.5" />
+      <circle cx="560" cy="180" r="5" />
+      <circle cx="640" cy="150" r="4" />
+      <circle cx="520" cy="130" r="3" />
+      <circle cx="690" cy="110" r="3.5" />
+    </g>
+  </g>
+
+  <!-- 下落中的晶瑩雨滴（動態感） -->
+  <g fill="url(#dropGrad)">
+    <path d="M 600 240 C 592 260, 584 275, 584 290 A 16 16 0 0 0 616 290 C 616 275, 608 260, 600 240 Z" opacity="0.9" />
+    <path d="M 380 140 C 375 155, 370 166, 370 178 A 10 10 0 0 0 390 178 C 390 166, 385 155, 380 140 Z" opacity="0.75" />
+    <path d="M 820 160 C 815 174, 810 185, 810 196 A 11 11 0 0 0 832 196 C 832 185, 827 174, 820 160 Z" opacity="0.75" />
+  </g>
+
+  <!-- 幾何排版文字與標籤 -->
+  <g font-family="'Cormorant Garamond', 'Noto Serif TC', serif" fill="#E4EFEA">
+    <text x="80" y="90" font-size="14" letter-spacing="4" opacity="0.7">THE SCIENCE OF PETRICHOR</text>
+    <text x="80" y="125" font-size="28" font-weight="600" letter-spacing="2">雨後氣味的誕生：微型氣膠的升騰</text>
+    <text x="80" y="150" font-size="13" font-family="'Noto Sans TC', sans-serif" letter-spacing="1" opacity="0.75">Geosmin · Soil Actinomycetes · Raindrop Aerosol Plume</text>
+  </g>
+
+  <!-- 右下角刻度與年份 -->
+  <g font-family="'Noto Sans TC', sans-serif" font-size="11" fill="#C0D6D0" opacity="0.6" text-anchor="end">
+    <text x="1120" y="620">MIT Buie &amp; Joung Fluid Dynamics (2015)</text>
+    <text x="1120" y="640">Bear &amp; Thomas Petrichor Concept (1964)</text>
+  </g>
+</svg>
